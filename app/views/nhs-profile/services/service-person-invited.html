@@ -1,0 +1,60 @@
+{% extends 'layouts/layout-nhsprofile.html' %}
+
+{% block pageTitle %}
+  Manage your NHS login
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/nhs-profile/settings/index",
+    text: "Manage your NHS login"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <style>
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  figure {
+    margin: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    display:block;
+    border-radius: 50%;
+  }
+
+  </style>
+
+      
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Fester Addams has been invited to access your Helm
+      </h1>
+
+      <p>We will send them an <a href="/emails/email-da-invite">email</a> telling them how to get access.</p>
+
+      {{ backLink({
+        "href": "/nhs-profile/services/services",
+        "text": "Back",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

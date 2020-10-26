@@ -1,0 +1,380 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Patterns that are not in the NHS.UK frontend library
+@import 'patterns/check-your-answers';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/related-nav';
+@import 'components/devmode';
+@import 'components/index';
+
+// Add your extra styles here...
+
+.nhsuk-button-red, .nhsuk-button-red:visited {
+	background-color: $color_nhsuk-red !important;
+	box-shadow: 0 4px 0 #5d0903 !important;
+}
+
+.nhsuk-button-red:hover, .nhsuk-button-red:focus {
+	background-color: #a5190e;
+}
+
+.nhsuk-hint-list li, .nhsuk-hint-list li span.nhsuk-hint {
+	margin-bottom: 8px;
+}
+
+.nhsuk-header__navigation-item--for-mobile {
+  display: none;
+}
+
+.body-email {
+	background-color: #d8dde0;
+}
+
+.email-width {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.email-width .nhsuk-width-container {
+	max-width: 550px;
+}
+
+.body-email .nhsuk-footer .nhsuk-width-container{
+	display: none;
+}
+
+// for manage login homepage
+
+.user-info {
+	display: inline;
+}
+
+.account-name-link {
+	display: inline-block;
+	position: relative;
+	top: -17px;
+}
+
+.account-name-link-2 {
+	display: inline-block;
+	position: relative;
+}
+
+.nhsuk-table-responsive.user-info-table {
+	margin-top: 0px;
+}
+
+.cell-left {
+	padding-left: 0px;
+}
+
+.cell-right {
+	padding-right: 0px;
+	text-align: right;
+}
+
+
+// index styling
+
+.nhsuk-expander.version-list {
+	background-color: #F0F4F5 !important;
+  }
+  
+.nhsuk-details__summary.index {
+background-color: #F0F4F5 !important;
+padding: 0px !important;
+}
+
+@media (max-width: 385px) {
+	tr,td {
+		display: block;
+	}
+	td.nhsuk-table__cell.cell-right {
+		text-align: left;
+		padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(3) nhsuk-spacing(0)
+	}
+	td:nth-child(2) {
+		border: none;
+		padding: nhsuk-spacing(1) nhsuk-spacing(1) nhsuk-spacing(2) nhsuk-spacing(0)
+	}
+	td.nhsuk-table__cell.cell-left {
+		border-bottom: none;
+		padding: nhsuk-spacing(3) nhsuk-spacing(1) nhsuk-spacing(2) nhsuk-spacing(0)
+	}
+	.row-responsive {
+		display: none;
+	}
+	td:nth-child(3) {
+		padding: nhsuk-spacing(0) nhsuk-spacing(1) nhsuk-spacing(2) nhsuk-spacing(0)
+	}
+}
+
+.align-top {
+	th,td{
+		vertical-align: top;
+	}
+}
+
+.no-bottom-border td{
+	border-bottom: none;
+}
+
+.table-contact{
+	background-color: $color_nhsuk-white;
+	tr,td{
+		background-color: $color_nhsuk-white;
+	}
+}
+
+.table-login{
+	background-color: $color_nhsuk-white;
+	tr{
+		padding: 18px 0;
+		background-color: $color_nhsuk-white;
+		border-bottom:$nhsuk-border-color 1px solid;
+	}
+	td{
+		border: none !important;
+		background-color: $color_nhsuk-white;
+	}
+}
+
+@media (max-width: 385px) {
+	.nhsuk-u-hide-385{
+		display: none;
+	}
+	.nhsuk-header__logo .nhsuk-logo{
+		width: 80px;
+	}
+	.nhsuk-header__service-name{
+		padding-top: 0;
+	}
+	.table-contact td:nth-child(2) {
+		border-bottom: 1px solid $nhsuk-border-color;
+	}
+}
+
+// Fixing reverse button bug
+.nhsuk-button--reverse {
+    color: #212b32 !important;
+}
+
+@media (max-width: 640px) {
+	.nhsuk-header__logo{
+		max-width: 60%;
+	}
+}
+
+// Spinner animation
+
+.loading-container {
+  margin: 0;
+  display: flex;
+  justify-content: center; }
+
+#spinner{
+	animation-name: spin;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+	display: inline-block;
+  &.done {
+	animation-name: spinback;
+	animation-duration: 1.25s;
+  }
+  }
+  @keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes spinback {
+  0% {
+	transform: rotate(360deg);
+  }
+  100% {
+	transform: rotate(0deg);
+  }
+  }
+
+  .uploader-container,
+.loading-container,
+#camera-container,
+.preview-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bar_container {
+    margin-top: 0!important;
+}
+
+.progress-pie-chart,
+.progress-spinner {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E5E5E5;
+    position: relative;
+    margin: 50px auto 0;
+}
+
+.progress-spinner {
+    background-color: white;
+}
+.progress-pie-chart.gt-50,
+.progress-spinner .gt-50 {
+    background-color: #367c42;
+}
+
+.ppc-progress {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 200px, 200px, 100px);
+}
+.ppc-progress .ppc-progress-fill {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 100px, 200px, 0);
+    background: #367c42;
+    transform: rotate(60deg);
+}
+.gt-50 .ppc-progress {
+    clip: rect(0, 100px, 200px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+    clip: rect(0, 200px, 200px, 100px);
+    background: #E5E5E5;
+}
+
+.ppc-percents,
+.ppc-loading {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 173.91304px/2);
+    top: calc(50% - 173.91304px/2);
+    width: 173.91304px;
+    height: 173.91304px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ppc-percents span,
+.ppc-loading span {
+    display: block;
+    font-size: 2.6em;
+    font-weight: bold;
+    color: #367c42;
+}
+
+.ppc-loading span {
+  display: inline-block;
+  position: relative;
+  font-size: 1.4em;
+  font-weight: normal;
+  color: #000000;
+  margin: 0;
+}
+
+.ppc-loading span.done {
+  //text-indent: -2000px;
+  margin-top: 1.5em;
+  &::before,
+  &::after {
+    content: "";
+    left: 20%;
+    font-weight: bold;
+    margin: 1.5em 0 0.25em;
+    top: -2em;
+    position: absolute;
+    zoom: 1;
+  }
+  &::before {
+    background: transparent;
+    border: solid;
+    border-color: #417505;
+    border-width: 0 0 10px 10px;
+    height: 24px;
+    top: -3.3em;
+    transform: rotate(-45deg);
+    width: 40px;
+  }
+  &::active::before {
+    height: 100%;
+    top: 0;
+  }
+  ~ * {
+    display: none;
+  }
+}
+
+.pcc-percents-wrapper {
+    display: flex;
+    vertical-align: middle;
+}
+
+.ppc-percents,
+.ppc-loading {
+    margin-top: 0!important;
+}
+
+
+
+/* Header in: layouts/layout-nhslogin.html */
+
+
+.nhsuk-header__link--service-short-name {
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 0;
+  height: auto;
+  text-decoration: none;
+  width: auto;
+}
+
+
+.nhsuk-header__logo .nhsuk-logo {
+  height: 40px;
+  width: 100px;
+  border: 0;
+}
+
+.nhsuk-header__service-name {
+  padding-left: 16px;
+  padding-right: 0px;
+  padding-top: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 20em) {
+  .nhsuk-button.full-width {
+    width: 100%; }
+}
+
+p{
+  font-weight: 500;
+}
