@@ -32,8 +32,8 @@
     "gulp-sass": "^4.1.0",
     "keypather": "^3.0.0",
     "nhsuk-frontend": "^3.1.0",
+    "node-sass": "^4.14.1",
     "nunjucks": "^3.2.2",
     "path": "^0.12.7"
-  },
-  "devDependencies": {}
+  }
 }
