@@ -36,7 +36,7 @@ module.exports = function (req, res, next) {
       return res.sendStatus(401)
     }
     
-    */ up to here!
+     up to here! */
 
     
   }
