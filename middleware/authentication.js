@@ -27,7 +27,7 @@ module.exports = function (req, res, next) {
     }
 
 
-    // Remove this if we don't want password
+    /* Remove this if we don't want password
     
     const user = basicAuth(req)
 
@@ -36,7 +36,7 @@ module.exports = function (req, res, next) {
       return res.sendStatus(401)
     }
     
-    // up to here!
+    */ up to here!
 
     
   }
