@@ -4,11 +4,19 @@
   Your services
 {% endblock %}
 
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/nhs-profile/settings/index",
-    text: "Manage your NHS login"
-  }) }}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/nhs-profile/index",
+      text: "Home"
+    }
+  ],
+  href: "/nhs-profile/services/services",
+  text: "Your services"
+}) }}
 {% endblock %}
 
 {% block content %}

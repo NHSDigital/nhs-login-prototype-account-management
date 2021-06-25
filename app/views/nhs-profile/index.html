@@ -1,0 +1,97 @@
+{% extends 'layouts/layout-nhsprofile.html' %}
+
+{% block pageTitle %}
+  Your NHS account
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/nhs-profile/index",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+            Beth Harmon's NHS account
+      </h1>
+
+      <p>NHS Account allows you to securely access health websites and apps with just one username and password.</b></p> 
+
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/nhs-profile/profile/profile">Your profile</a>
+              </h2>
+              <p class="nhsuk-card__description">A oneliner about the prototype page we’re linking too.</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/nhs-profile/settings/settings">Settings</a>
+              </h2>
+              <p class="nhsuk-card__description">A oneliner about the prototype page we’re linking too.</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/nhs-profile/services/services">Your services</a>
+              </h2>
+              <p class="nhsuk-card__description">A oneliner about the prototype page we’re linking too.</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/nhs-profile/your-gp/your-gp">Your GP</a>
+              </h2>
+              <p class="nhsuk-card__description">A oneliner about the prototype page we’re linking too.</p>
+            </div>
+          </div>
+
+        </li>
+        <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/nhs-profile/health-profiles/health-profiles">People you care for</a>
+              </h2>
+              <p class="nhsuk-card__description">A oneliner about the prototype page we’re linking too.</p>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+    
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="password-change">
+        Log out
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}

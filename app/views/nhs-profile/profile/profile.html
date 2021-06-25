@@ -4,11 +4,19 @@
   Your profile
 {% endblock %}
 
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/nhs-profile/settings/index",
-    text: "Manage your NHS login"
-  }) }}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/nhs-profile/index",
+      text: "Home"
+    }
+  ],
+  href: "/nhs-profile/profile/profile",
+  text: "Your profile"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -20,27 +28,79 @@
           Your profile
       </h1>
 
+      <h2>
+      Beth Harmon
+      </h2>
+
+      <h3>
+      Your personal record
+      </h3>
+
+      <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>Full name</strong></td>
+            <td class="nhsuk-table__cell ">Beth Harmon</td>
+            <td class="nhsuk-table__cell "><a href="#">Suggest correction<a/></td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>Date of birth</strong></td>
+            <td class="nhsuk-table__cell ">2 November 1984</td>
+            <td></td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>NHS number</strong></td>
+            <td class="nhsuk-table__cell ">485 777 3456</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <h3>
+      How we contact you
+      </h3>
+
       <p>
-        Name: <b>Morticia Addams</b><br>
-        Date of birth: <b>12th October 1942</b><br>
-        NHS Number: <b>6660666000</b>
-      </p> 
+      You’re contact number is the same as the number attached to your account.
+      </p>
+
+      <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>Address</strong></td>
+            <td class="nhsuk-table__cell ">62 Mill Road<br>London<br>E42 1RB</td>
+            <td class="nhsuk-table__cell "><a href="#">Change address<a/></td>
+          </tr>
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>Phone number</strong></td>
+            <td class="nhsuk-table__cell ">••••••••487</td>
+            <td class="nhsuk-table__cell "><a href="#">Change contact number<a/></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Organ donation preferences</h3>
+
+      <p>Help save thousands of lives in the UK every year by signing up to become a donor on the NHS Organ Donor Register</p>
+
+      <p>
+        <a href="#">Register your decision</a>
+      </p>
 
       <hr>
 
-      <h2>Address</h2>
+      <h3>Data sharing preferences</h3>
 
-      <p>21 Chester Place,<br>
-        Leeds LS7 2LA</p>
-    
+      <p>Find out how the NHS uses your confidential patient information and choose whether or not it can be used for research and planning.</p>
 
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="/nhs-profile/address-change">
-        Change your address
-      </a>
+      <p>
+        <a href="#">How your data is used</a>
+      </p>
 
       <hr>
 
-      <h2>Profile picture</h2>
+      <h3>Profile picture</h3>
 
       <style>
 
@@ -67,13 +127,13 @@
       </style>
 
       <figure>
-        <img src="/images/avatar-morticia.png" alt="Your profile picture">
+        <img src="/images/avatar-beth.png" alt="Your profile picture">
       </figure> 
     
 
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="picture-change">
-        Change your profile picture
-      </a>
+      <p>
+        <a href="#">Change your profile picture</a>
+      </p>
 
     </div>
 

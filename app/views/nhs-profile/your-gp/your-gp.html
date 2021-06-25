@@ -4,11 +4,19 @@
   Manage your NHS login
 {% endblock %}
 
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/nhs-profile/index",
-    text: "Manage your NHS login"
-  }) }}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/nhs-profile/index",
+      text: "Home"
+    }
+  ],
+  href: "/nhs-profile/your-gp/your-gp",
+  text: "Your GP"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -20,20 +28,16 @@
           Your GP
       </h1>
 
-      <h2>Street Lane Practice</h2>
+      <table class="nhsuk-table">
+        <tbody class="nhsuk-table__body">
+          <tr role="row" class="nhsuk-table__row">
+            <td class="nhsuk-table__cell"><strong>The Gardens Surgery</strong></td>
+            <td class="nhsuk-table__cell ">The Gardens<br>London<br>SE22 9QU</td>
+          </tr>
+        </tbody>
+      </table>
 
-
-      <p>12 Devonshire Ave,<br>
-        Leeds LS8 1AY</p>
-    
-
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="/nhs-profile/your-gp/gp-update">
-        Update your GP
-      </a>
-
-      <hr>
-
-      <h2>GP connection details</h2>
+      <h3>GP connection details</h3>
 
       {{ table({
         panel: false,
