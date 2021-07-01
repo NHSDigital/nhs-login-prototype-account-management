@@ -20,6 +20,8 @@ function cleanPublic() {
   .pipe(clean());
 }
 
+sass.compiler = require('sass');
+
 // Compile SASS to CSS
 function compileStyles() {
   return gulp.src([
@@ -96,9 +98,8 @@ function startBrowserSync(done){
     files: ['app/views/**/*.*', 'docs/views/**/*.*'],
     ghostmode: false,
     open: false,
-    notify: false,
+    notify: true,
     watch: true,
-    logLevel: 'debug',
   }, done);
   gulp.watch("public/**/*.*").on("change", reload);
 }
