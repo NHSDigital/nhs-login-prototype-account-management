@@ -12,6 +12,12 @@
 
 // Add your extra styles here...
 
+.nhsuk-expander.version-list {
+  background-color: #F0F4F5 !important;
+  border: none;
+  border-width: 0px;
+}
+
 .nhsuk-button-red, .nhsuk-button-red:visited {
 	background-color: $color_nhsuk-red !important;
 	box-shadow: 0 4px 0 #5d0903 !important;

@@ -6535,6 +6535,11 @@ details.dev-mode summary, details.dev-mode ol {
 .no-bottom-border td {
   border-bottom: none; }
 
+.nhsuk-expander.version-list {
+  background-color: #F0F4F5 !important;
+  border: none;
+  border-width: 0px; }
+
 .nhsuk-button-red, .nhsuk-button-red:visited {
   background-color: #d5281b !important;
   box-shadow: 0 4px 0 #5d0903 !important; }
