@@ -4,11 +4,19 @@
   Manage your NHS login
 {% endblock %}
 
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
 {% block beforeContent %}
-  {{ breadcrumb({
-    href: "/nhs-profile/index",
-    text: "Home"
-  }) }}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/nhs-profile/index",
+      text: "Home"
+    }
+  ],
+  href: "/nhs-profile/health-profiles/health-profiles",
+  text: "People you care for"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -62,62 +70,42 @@
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">
                 <figure>
-                  <img src="/images/avatar-fester.png" alt="Uncle Fester">
+                  <img src="/images/avatar-alma.png" alt="Alma Wheatley">
                 </figure>
               </td>
-              <td class="nhsuk-table__cell"><a href="#">Fester Addams</a></td>
-              <td class="nhsuk-table__cell ">Uncle or brother-in-law</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
+              <td class="nhsuk-table__cell"><a href="#">Alma Wheatley</a></td>
+              <td class="nhsuk-table__cell ">Mother</td>
+              <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">
                 <figure>
-                  <img src="/images/avatar-gomez.png" alt="Gomez Addams">
+                  <img src="/images/blue-dot.svg" alt="Bobby Harmon">
                 </figure>
               </td>
-              <td class="nhsuk-table__cell"><a href="#">Gomez Addams</a></td>
+              <td class="nhsuk-table__cell"><a href="#">Bobby Harmon</a></td>
               <td class="nhsuk-table__cell ">Husband</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
+              <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell">
                 <figure>
-                  <img src="/images/avatar-grandmama.png" alt="Grandmama Addams">
+                  <img src="/images/blue-dot.svg" alt="Judit Harmon">
                 </figure>
               </td>
-              <td class="nhsuk-table__cell"><a href="#">Grandmama Addams</a></td>
-              <td class="nhsuk-table__cell ">Grandmother</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">
-                <figure>
-                  <img src="/images/avatar-ophelia.png" alt="Ophelia Frump">
-                </figure>
-              </td>
-              <td class="nhsuk-table__cell"><a href="#">Ophelia Frump</a></td>
-              <td class="nhsuk-table__cell ">Sister</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">
-                <figure>
-                  <img src="/images/avatar-pugsley.png" alt="Pugsley Addams">
-                </figure>
-              </td>
-              <td class="nhsuk-table__cell"><a href="#">Pugsley Addams</a></td>
-              <td class="nhsuk-table__cell ">Son</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
-            </tr>
-            <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell">
-                <figure>
-                  <img src="/images/avatar-wednesday.png" alt="Wednesday Addams">
-                </figure>
-              </td>
-              <td class="nhsuk-table__cell"><a href="#">Wednesday Addams</a></td>
+              <td class="nhsuk-table__cell"><a href="#">Judit Harmon</a></td>
               <td class="nhsuk-table__cell ">Daughter</td>
-              <td class="nhsuk-table__cell"><a href="#">Delete</a></td>
+              <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">
+                <figure>
+                  <img src="/images/blue-dot.svg" alt="Ophelia Frump">
+                </figure>
+              </td>
+              <td class="nhsuk-table__cell"><a href="#">Magnus Harmon</a></td>
+              <td class="nhsuk-table__cell ">Son</td>
+              <td class="nhsuk-table__cell"><a href="#">Remove</a></td>
             </tr>
           </tbody>
         </table>
