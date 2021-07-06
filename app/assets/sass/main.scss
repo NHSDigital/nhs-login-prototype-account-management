@@ -12,6 +12,20 @@
 
 // Add your extra styles here...
 
+// Email OTP
+
+.otp-container{
+  background-color: $color_nhsuk-blue;
+  color: $color_nhsuk-white;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+  #otp-code {
+    margin: 0px;
+  }
+
+}
+
 .nhsuk-expander.version-list {
   background-color: #F0F4F5 !important;
   border: none;
