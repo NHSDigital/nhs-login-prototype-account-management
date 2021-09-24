@@ -1,0 +1,30 @@
+{% extends 'layouts/layout.html' %}
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+  Your email address is already being changed
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-5">
+
+      <h1 class="nhsuk-heading-l">
+        Your email address is already being changed
+      </h1>
+
+      <p class="nhsuk-body">Your email address is being changed to <strong>mail@mail.com</strong>.</p>
+
+      <p>We have sent you a security code by email. You will need to enter this security code to confirm your email address.</p>
+
+      <p>If you want to change your email address again, you must wait <strong>1 hour</strong> before you can do so.</p>
+
+      <a class="nhsuk-button full-width" href="https://nhs-login-registration.herokuapp.com/set-up/v-9/email-confirmation-code/register-check-email">Enter security code</a>
+
+      <p>Go back to <a href="https://nhs-login-account-management.herokuapp.com/account/v6/">Manage your NHS login</a> to make any other changes.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
