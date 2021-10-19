@@ -1,0 +1,62 @@
+{% extends 'layouts/layout-manage.html' %}
+
+{% block pageTitle %}
+  Manage your NHS login
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+  {{ backLink({
+        "href": "index",
+        "text": "Back to: Manage your NHS account"
+      }) }}
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
+      <p>These are the details your GP and other NHS services use to contact you. This will not change the contact details on your NHS login.</p>
+      <div class="nhsuk-table-container user-info-table">
+        <table class="nhsuk-table">
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell cell-left"><b>Email</b></td>
+              {% if data['user-email'] %}
+              <td class="nhsuk-table__cell">{{ data['user-email'] }}</td>
+                {% else %}
+              <td class="nhsuk-table__cell"><p style="margin: 0px;">jonkingston@gmail.com</p></td>
+              {% endif %}
+              </td>
+              <td class="nhsuk-table__cell cell-right"><a href="email/email-enter">Change email address</a></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell cell-left"><b>Phone</b></td>
+              <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;429</td>
+              <td class="nhsuk-table__cell cell-right"><a href="phone/phone-change">Change phone number</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="{{ params }}?has-recovery-email=1">User has recovery email</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock %}
+

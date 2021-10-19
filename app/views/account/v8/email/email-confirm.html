@@ -1,0 +1,33 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+  Check your email
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Your security code
+      </h1>
+
+      <p>Use this security code to confirm your new email address.</p>
+
+    </div>
+
+    <div class="nhsuk-grid-column-one-third">
+        <div class="otp-container">
+            <h1 class="nhsuk-fieldset__legend--l" id="otp-code">793249</h1>
+        </div>
+  
+    </div>
+
+      <div class="nhsuk-grid-column-full">
+
+      <p>You need to use this security code within <b>1 hour</b>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

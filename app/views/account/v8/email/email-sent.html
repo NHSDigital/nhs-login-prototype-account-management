@@ -1,0 +1,65 @@
+{% extends 'layouts/layout-manage.html' %}
+
+{% block pageTitle %}
+  Your email address has been changed
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address</span>
+      <h1 class="nhsuk-heading-l">
+      Check your email
+      </h1>
+
+      <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
+      
+      <p>You need to use this code within <b>1 hour</b> or it will expire.</p>
+
+      <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Not received your security code?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>If you did not get a security code, check your spam folder.</p>
+              <p>If you still haven't received one <a href="email-sent-resend">request a new security code</a> or <a href="email-enter">enter your new email address to try again</a>.</p>
+
+            </div>
+          </details>
+
+      <form action="email-confirmed" method="post">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Security code
+          </label>
+          <span class="nhsuk-hint" id="otp-hint-text">
+            The code is 6 numbers
+          </span>
+          <input
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+            type="number" aria-describedby="security-code-input">
+        </div>
+
+
+        <fieldset class="nhsuk-fieldset">
+          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'mail@mail.com' }} type="hidden">
+        </fieldset>
+        <button data-redirect="email-confirmed" class="nhsuk-button"
+          id="button--save">Continue</button>
+
+    </form>
+
+      {{ backLink({
+        "href": "../index",
+        "text": "I do not want to change my email address",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'layouts/layout-manage.html' %}
+
+{% block pageTitle %}
+  Delete your NHS login
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-fieldset__legend--l">
+        Delete your NHS login
+      </h1>
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">When you delete your NHS login</h3>
+        <p>You will no longer be able to use NHS login to access any services.</p>
+        <p>Any services you have used with NHS login may keep some information about you in line with their terms and conditions and privacy notice.</p>
+        <p>We may also keep some information about you in line with NHS login's data retention policy.</p>
+        <p>Our <a href="https://access.login.nhs.uk/privacy">Privacy Notice</a> provides a summary of how we use your information.</p>
+      </div>
+
+      <p class="nhsuk-heading-m nhsuk-u-margin-top-3">Are you sure you want to delete your NHS login?</p>
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="delete-login-password">
+        Delete your NHS login
+      </a>
+
+      {{ backLink({
+        "href": "../index",
+        "text": "I do not want to delete my NHS login",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}
