@@ -1,0 +1,55 @@
+{% extends 'layouts/layout-manage-account.html' %}
+
+{% block pageTitle %}
+  Manage your NHS account
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+  {{ backLink({
+        "href": "/account/v8/contact-preferences/contact-preferences",
+        "text": "Back to: Contact details on your NHS record"
+      }) }}
+
+    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-card nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-l">
+                You want to add an email address
+              </h2>
+              <p class="nhsuk-card__description">Some NHS services, like your GP surgery, may continue to use your previous contact details.</p>
+              <p class="nhsuk-card__description">This is because there may be a delay before they check your updated record.</p>
+              <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="phone-change-number">
+                Continue
+              </a>
+              <br><br>
+              <a href="/contact-preferences/index" class="nhsuk-link">I do not want to change my email address</a>
+            </div>
+          </div>
+
+      <!--
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="{{ params }}?has-recovery-email=1">User has recovery email</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+      -->
+
+    </div>
+
+  </div>
+
+{% endblock %}
+
