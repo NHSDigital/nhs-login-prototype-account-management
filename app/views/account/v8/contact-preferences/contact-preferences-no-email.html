@@ -20,17 +20,20 @@
           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Email</b></td>
-              {% if data['user-email'] %}
-              <td class="nhsuk-table__cell">{{ data['user-email'] }}</td>
-                {% else %}
-              <td class="nhsuk-table__cell"><p style="margin: 0px;"><strong>Your email address is not on your NHS record</strong></p></td>
-              {% endif %}
+              <td class="nhsuk-table__cell cell-left">
+                <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
+                  <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="nhsuk-warning-text__text">
+                    <span class="nhsuk-warning-text__assistive">Important</span>
+                  Your email address is not on your NHS record
+                  </strong>
+                </div>
               </td>
-              <td class="nhsuk-table__cell cell-right"><a href="change-email/change-email-interrupt?=no-email">Add an email address to your NHS record</a></td>
+              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt-add?=no-email">Add an email address to your NHS record</a></td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Phone</b></td>
-              <td class="nhsuk-table__cell ">07888364455</td>
+              <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;455</td>
               <td class="nhsuk-table__cell cell-right"><a href="change-mobile-phone/change-mobile-interrupt">Change phone number</a></td>
             </tr>
           </tbody>

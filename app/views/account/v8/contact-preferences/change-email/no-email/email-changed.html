@@ -10,49 +10,33 @@ Check your details
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
-  
-
-  {{ backLink({
-        "href": "multiple-numbers-select",
-        "text": "Back to: We have more than one mobile number for you"
-      }) }}
 
 
-    <form method="post" action="auth">
+    <form method="post" action="/account/v8/contact-preferences/contact-preferences">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
-              Check your contact details
+              Your email address has changed
             </h1>
           </legend>
 
-        <div class="nnhsuk-table-container">
-          <table class="nhsuk-table">
-            <tbody class="nhsuk-table__body">
-              <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
-                <td class="nhsuk-table__cell ">{{ data.mobile-number or '07888364455' }}</td>
-                <td class="nhsuk-table__cell "><a href="multiple-numbers-select">Change mobile phone number for NHS record</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <p>Your email address has been changed to <strong>{{ data.email-addres or 'jonkingston@gmail.com' }}</strong>.
 
-        <div class="nhsuk-u-padding-bottom-2"></div>
-
-        <p>These changes will not affect your NHS login details.</p>
-
-        <div class="nhsuk-u-padding-bottom-2"></div>
+          <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+              <span role="text">
+                <span class="nhsuk-u-visually-hidden">Important: </span>
+                Potential delays
+              </span>
+            </h3>
+            <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
+          </div>
 
         <button class="nhsuk-button" type="submit">
-          Save and continue
+          Go back to settings
         </button>
-
-        <div class="nhsuk-u-padding-bottom-2"></div>
-
-        <a href="/account/v8/contact-preferences/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a>
             
         </fieldset>
 

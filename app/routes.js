@@ -9,6 +9,7 @@ router.get('/examples/passing-data', function (req, res) {
   res.render('examples/passing-data/index')
 });
 
+
 // Branching example
 router.post('/examples/branching/answer', function (req, res) {
   let nhsNumber = req.body.nhsNumber;
@@ -194,8 +195,6 @@ router.get('/clear', (req, res) => {
 	res.redirect('/index')
 })
 
-module.exports = router;
-
 // Change email routing
 router.get('/account/v2', function (req, res) {
   res.render('account/v2/index')
@@ -206,17 +205,33 @@ router.get('/account/v2', function (req, res) {
 // Multiple numbers route
 
 router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/multiple-numbers-select', function (req, res) {
-  var confDetails = req.session.data['multiple-numbers']
-  if (confDetails == "selection1"){
-    res.redirect('check-your-details?=mobile-number')
-  }
-  else if (confDetails == "selection2"){
-    res.redirect('check-your-details?=mobile-number')
-  }
-  else if (confDetails == "selection3"){
-    res.redirect('check-your-details?=mobile-number')
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio']
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to next page
+    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+  } else if (confDetails == "no") {
+    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
   }
 })
+
+// No email
+
+router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
+  var confDetails = req.session.data['use-login']
+  if (confDetails == "yes"){
+    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+  }
+  else if (confDetails == "no"){
+    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+  }
+})
+
 
 
 // Dev Mode
@@ -240,3 +255,5 @@ function devModeRoute(req, res, next) {
 
 router.get("/*", devModeRoute);
 router.get("/", devModeRoute);
+
+module.exports = router;

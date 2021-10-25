@@ -1,0 +1,67 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% block pageTitle %}
+  Enter your password to change your phone number
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "/account/v8/contact-preferences/contact-preferences",
+        "text": "Back to: Contact details on your NHS record"
+      }) }}
+
+      <form method="post">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+              <h1 class="nhsuk-fieldset__heading">
+                Do you want to add the email address you use for NHS login?
+              </h1>
+        </legend>
+
+        <p class="nhsuk-body-m">You use <strong>jonkingston@gmail.com</strong> for your NHS login. You can add this to your NHS record. This means your GP and other NHS services may use it to contact you.</p>
+
+        <div class="nhsuk-form-group">
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="yes" name="use-login" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="yes">
+            Yes
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="no" name="use-login" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="no">
+            No
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  </div>
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="check-your-details">
+        Continue
+      </a>
+
+      </form>
+      
+      
+      <div class="nhsuk-u-padding-bottom-4"></div>
+
+      <a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my email address</a>
+
+    </div>
+
+  </div>
+{% endblock %}
