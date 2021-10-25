@@ -201,6 +201,23 @@ router.get('/account/v2', function (req, res) {
   res.render('account/v2/index')
 });
 
+// Contact preferences update
+
+// Multiple numbers route
+
+router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/multiple-numbers-select', function (req, res) {
+  var confDetails = req.session.data['multiple-numbers']
+  if (confDetails == "selection1"){
+    res.redirect('check-your-details?=mobile-number')
+  }
+  else if (confDetails == "selection2"){
+    res.redirect('check-your-details?=mobile-number')
+  }
+  else if (confDetails == "selection3"){
+    res.redirect('check-your-details?=mobile-number')
+  }
+})
+
 
 // Dev Mode
 

@@ -12,7 +12,7 @@
         "text": "Back to: Manage your NHS account"
       }) }}
 
-    <div class="nhsuk-grid-column-two-thirds">
+    <div class="nhsuk-grid-column-three-quarters">
       <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
       <p>These are the details your GP and other NHS services use to contact you. This will not change the contact details on your NHS login.</p>
       <div class="nhsuk-table-container user-info-table">
@@ -28,10 +28,19 @@
               </td>
               <td class="nhsuk-table__cell cell-right"><a href="change-email/change-email-interrupt">Change email address</a></td>
             </tr>
+            
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Phone</b></td>
-              <td class="nhsuk-table__cell "><strong>You have more than one mobile phone number on your NHS record</strong></td>
-              <td class="nhsuk-table__cell cell-right"><a href="change-mobile-phone/change-mobile-interrupt?=multiple-numbers">Choose which mobile phone number you want to keep on your NHS record</a></td>
+              <td class="nhsuk-table__cell cell-left">
+              <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
+                <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="nhsuk-warning-text__text">
+                  <span class="nhsuk-warning-text__assistive">Important</span>
+                You have more than one mobile phone number on your NHS record
+                </strong>
+              </div>
+              </td>
+              <td class="nhsuk-table__cell cell-right"><a href="change-mobile-phone/multiple-numbers/change-mobile-interrupt?=multiple-numbers">Choose which mobile phone number you want to keep on your NHS record</a></td>
             </tr>
           </tbody>
         </table>

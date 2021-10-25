@@ -1,0 +1,74 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% block pageTitle %}
+  Enter your password to change your phone number
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "../contact-preferences/contact-preferences",
+        "text": "Back to: Contact details on your NHS record"
+      }) }}
+
+      <form method="post">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+              <h1 class="nhsuk-fieldset__heading">
+                Which mobile phone number should the NHS use to contact you?
+              </h1>
+        </legend>
+
+        <p class="nhsuk-body-m nhsuk-hint">We have more than one mobile phone number for you. The mobile numbers you do not choose will be removed from your NHS record.</p>
+
+        <div class="nhsuk-form-group">
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="selection1" name="multiple-numbers" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="selection1">
+            07888364455
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="selection2" name="multiple-numbers" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="selection2">
+            +447736251423
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="selection3" name="multiple-numbers" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="selection3">
+            I want to use a different phone number
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+  </div>
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="check-your-details">
+        Continue
+      </a>
+
+      </form>
+      
+      
+      <div class="nhsuk-u-padding-bottom-4"></div>
+
+      <a href="#" class="nhsuk-link">I do not want to change my phone number</a>
+
+    </div>
+
+  </div>
+{% endblock %}

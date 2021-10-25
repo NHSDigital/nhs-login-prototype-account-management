@@ -1,0 +1,75 @@
+{% extends 'layouts/layout-manage-account.html' %}
+
+{% block pageTitle %}
+  Your email address has been changed
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+      <h1 class="nhsuk-fieldset__legend--l">
+          Email address changed
+      
+      <p>Your email address on your NHS record has been changed to <b>{{ data.emailAddress or 'mail@mail.com' }}</b>.
+      <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+        <span role="text">
+          <span class="nhsuk-u-visually-hidden">Important: </span>
+          Potential delays
+        </span>
+      </h3>
+      <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
+      </div>
+
+      <div class="nhsuk-form-group">
+
+  <form>
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Would you like to update your NHS login with this email?
+        </h1>
+      </legend>
+
+      <div class="nhsuk-radios">
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Yes
+          </label>
+        </div>
+
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            No, go back to settings
+          </label>
+        </div>
+
+      </div>
+    </fieldset>
+
+
+
+      <button class="nhsuk-button full-width" type="submit">
+        Continue
+      </button>
+
+    </form>
+</div>
+
+
+
+      {{ backLink({
+        "href": "../index",
+        "text": "Back to: Your NHS login details",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}
