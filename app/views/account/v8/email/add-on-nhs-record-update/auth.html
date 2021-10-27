@@ -12,7 +12,7 @@ Saving your details
   <div class="nhsuk-width-container">
     <h1 class="nhsuk-heading-l">Saving your details</h1>
 
-    <form action="auth" method="post">
+    <form action="email-changed" method="post">
       <section class="loading-container" id="gp-connect-0" style="display:block; min-height: 16em;">
 
         <div class="bar_container">
@@ -55,19 +55,10 @@ Saving your details
   </div>
 </div>
 
-{% if data['p5'] %}
 <script>
   setTimeout(function () {
-    window.location.href = '/p5/know-nhs-number';
+    window.location.href = 'email-changed';
   }, 2500);
 </script>
-{% else %}
-<script>
-  setTimeout(function () {
-    window.location.href =
-      'https://nhs-cid.herokuapp.com/service-access/v24/service-access-start?service=app6&serviceName=the%20NHS%20app&devMode=false&hideBack=true&uplift=false';
-  }, 2500);
-</script>
-{% endif %}
 
 {% endblock %}

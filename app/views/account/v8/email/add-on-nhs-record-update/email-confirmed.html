@@ -8,27 +8,19 @@
   <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-two-thirds">
-      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS login</span>
       <h1 class="nhsuk-fieldset__legend--l">
           Email address changed
       </h1>
       
-      <p>Your email address on your NHS record has been changed to <b>{{ data.emailAddress or 'mail@mail.com' }}</b>.
-      <div class="nhsuk-warning-callout">
-      <h3 class="nhsuk-warning-callout__label">
-        <span role="text">
-          <span class="nhsuk-u-visually-hidden">Important: </span>
-          Potential delays
-        </span>
-      </h3>
-      <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
-      </div>
-
+      <p>Your email address on your NHS login has been changed to <b>{{ data.emailAddress or 'mail@mail.com' }}</b></p>
+      <p>Your password will stay the same.</p>
+      
       <div class="nhsuk-form-group">
 
-  <form>
+  <form action="check-your-details" method="post">
     <fieldset class="nhsuk-fieldset">
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
         <h1 class="nhsuk-fieldset__heading">
           Would you like to update your NHS login with this email?
         </h1>
@@ -51,14 +43,20 @@
         </div>
 
       </div>
+
     </fieldset>
+
     </div>
 
 
 
-      <button class="nhsuk-button full-width" type="submit">
+      <button class="nhsuk-button" type="submit">
         Continue
       </button>
+
+      </div>
+    </fieldset>
+    </div>
 
     </form>
 </div>

@@ -1,0 +1,48 @@
+<!-- Extends the layout from /app/views/layouts/layout.html -->
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+NHS login
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <!-- Change the page title here -->
+    <h1 class="nhsuk-heading-xl">
+      User testing session Tuesday 2nd November
+    </h1>
+  </div>
+</div>
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+
+    <h2 class="nhsuk-heading-l">Update contact details</h2>
+
+    <ul>
+      <li><a href="/account/v8/contact-preferences/interrupt-journey/index" class="nhsuk-link">Interrupt journey</a></li>
+    </ul>
+    
+    <div class="nhsuk-u-padding-bottom-4"></div>
+
+    <h3 class="nhsuk-heading-m">Settings</h3>
+
+    <ol>
+          <li><a href="/account/v8/index?route=2">Multiple numbers</a></li>
+          <!--/account/v8/contact-preferences/contact-preferences-multiple-numbers-->
+          <li><a href="/account/v8/index?route=3">No email</a></li>
+          <!--/account/v8/contact-preferences/contact-preferences-no-email-->
+          <li><a href="/account/v8/index?route=1">Update details</a></li>
+    </ol>
+
+
+<div class="spacing-example">
+  <div class="nhsuk-u-padding-bottom-8"></div>
+</div>
+
+{% endblock %}
