@@ -222,13 +222,15 @@ router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-number
 
 // No email
 
-router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
-  var confDetails = req.session.data['use-login']
-  if (confDetails == "yes"){
-    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+router.post('/views/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
+  var useLogin = req.session.data['use-nhs-login']
+  if (useLogin == "Yes"){
+    res.redirect('/views/account/v8/contact-preferences/change-email/no-email/check-your-details')
+    //console.log ("Yes")
   }
-  else if (confDetails == "no"){
-    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+  else {
+    res.redirect('/views/account/v8/contact-preferences/change-email/no-email/enter-email')
+    //console.log ("No")
   }
 })
 
