@@ -1,0 +1,48 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+The contact details on your NHS record could be out of date
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+  <form action="multiple-numbers/multiple-numbers-select" autocomplete="on">
+
+    
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-heading-l">
+            The contact details on your NHS record could be out of date
+          </h1>
+        </legend>
+
+        <p>These are the details your GP and other NHS services use to contact you.</p>
+
+        <p>It will take <strong>1-2 minutes</strong> to update the contact details on your NHS record. This will not change the contact details on your NHS login.</p>
+
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>If now is not a good time, you can do this later on your 'Manage NHS login' page.</p>
+        </div>
+      
+        <a>
+          <button class="nhsuk-button full-width" id="button--save">Update my contact details</button>
+        </a>
+
+        <a href="#" title="Skip link">Skip this and take me to the NHS App</a>
+      
+
+  </fieldset>
+
+  </form>
+
+  </div>
+</div>
+
+{% endblock %}
