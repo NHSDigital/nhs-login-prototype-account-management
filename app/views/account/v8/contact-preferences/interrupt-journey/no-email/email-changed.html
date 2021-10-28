@@ -1,0 +1,49 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Check your details
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+    <form method="post" action="#">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              We have saved your updated contact details to your NHS record
+            </h1>
+          </legend>
+
+          <p>Your mobile phone number has been changed to <strong>{{ data.mobileNumber or '07888364455' }}</strong>.
+          <p>Your email address has been changed to <strong>{{ data.email-addres or 'jonkingston@gmail.com' }}</strong>.
+
+          <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+              <span role="text">
+                <span class="nhsuk-u-visually-hidden">Important: </span>
+                Potential delays
+              </span>
+            </h3>
+            <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
+          </div>
+
+        <button class="nhsuk-button" type="submit">
+          Continue to NHS App
+        </button>
+            
+        </fieldset>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

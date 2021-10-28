@@ -212,11 +212,25 @@ router.post('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
     // Send user to next page
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login')
   } else if (confDetails == "no") {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login')
   } else if (confDetails == "incorrect") {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login')
+  }
+})
+
+// Interrupt email select
+
+router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login', function (req, res) {
+  var useLogin = req.session.data['use-nhs-login'];
+  if (useLogin == "yes"){
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/check-your-details')
+    //console.log ("Yes")
+  }
+  else {
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/enter-email')
+    //console.log ("No")
   }
 })
 
