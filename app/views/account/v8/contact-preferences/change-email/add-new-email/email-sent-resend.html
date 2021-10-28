@@ -1,4 +1,4 @@
-{% extends 'layouts/layout-manage.html' %}
+{% extends 'layouts/layout-manage-account-2.html' %}
 
 {% block pageTitle %}
   Your email address has been changed
@@ -13,14 +13,29 @@
       Check your email
       </h1>
 
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You have been sent a new security code.</p>
+      </div>
+
       <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
       
       <p>You need to use this code within <b>1 hour</b> or it will expire.</p>
 
-      <a href="email-sent-resend">Request a new security code</a>
+      <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Not received your security code?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>If you did not get a security code, check your spam folder.</p>
+              <p>If you still haven't received one <a href="email-sent-resend">request a new security code</a> or <a href="email-enter">enter your new email address to try again</a>.</p>
 
+            </div>
+          </details>
 
-      <form action="add-on-nhs-record-update/email-confirmed" method="post">
+      <form action="email-confirmed" method="post">
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="input-with-hint-text">
             Security code

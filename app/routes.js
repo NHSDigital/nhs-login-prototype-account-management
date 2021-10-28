@@ -202,12 +202,30 @@ router.get('/account/v2', function (req, res) {
 
 // Contact preferences update
 
+// Interrupt number select
+
+router.post('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/multiple-numbers-select', function (req, res) {
+  
+  // Make a variable and give it the value from 'confirm-details-radio'
+  var confDetails = req.session.data['confirm-details-radio'];
+
+  //Check whether the variable matches a condition below
+  if (confDetails == "yes") {
+    // Send user to next page
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+  } else if (confDetails == "no") {
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+  } else if (confDetails == "incorrect") {
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/check-your-details?=mobile-number')
+  }
+})
+
 // Multiple numbers route
 
 router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/multiple-numbers-select', function (req, res) {
   
   // Make a variable and give it the value from 'confirm-details-radio'
-  var confDetails = req.session.data['confirm-details-radio']
+  var confDetails = req.session.data['confirm-details-radio'];
 
   //Check whether the variable matches a condition below
   if (confDetails == "yes") {
@@ -222,14 +240,14 @@ router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-number
 
 // No email
 
-router.post('/views/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
-  var useLogin = req.session.data['use-nhs-login']
-  if (useLogin == "Yes"){
-    res.redirect('/views/account/v8/contact-preferences/change-email/no-email/check-your-details')
+router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
+  var useLogin = req.session.data['use-nhs-login'];
+  if (useLogin == "yes"){
+    res.redirect('/account/v8/contact-preferences/change-email/no-email/check-your-details')
     //console.log ("Yes")
   }
   else {
-    res.redirect('/views/account/v8/contact-preferences/change-email/no-email/enter-email')
+    res.redirect('/account/v8/contact-preferences/change-email/no-email/enter-email')
     //console.log ("No")
   }
 })

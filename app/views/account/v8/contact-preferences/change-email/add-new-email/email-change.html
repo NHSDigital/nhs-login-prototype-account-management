@@ -1,4 +1,4 @@
-{% extends 'layouts/layout-manage-account.html' %}
+{% extends 'layouts/layout-manage-account-2.html' %}
 
 {% block pageTitle %}
   Enter your password to change your email address
@@ -12,13 +12,13 @@
         <form action="email-sent" method="post" class="form">
           <fieldset class="nhsuk-fieldset">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address</span>
+            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
               <h1 class="nhsuk-fieldset__heading">
                 Enter your password
               </h1>
             </legend>
             <div class="nhsuk-form-group">
-              <p class="nhsuk-body-m nhsuk-hint">We need to make sure it's you before you can change your email address.</p>
+              <p class="nhsuk-body-m nhsuk-hint">We need to make sure it’s you before you can change your email address.</p>
               <label class="nhsuk-label" for="email-code">
                 Password
               </label>
@@ -26,13 +26,11 @@
             </div>
           </fieldset>
           <button class="nhsuk-button">Continue</button>
+      
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <a href="/account/v8/contact-preferences/contact-preferences" class="nhsuk-link">I do not want to change my email address</a>
         </form>
-  
-        {{ backLink({
-          "href": "/account/v8/login-settings",
-          "text": "I don't want to change my email address",
-          "classes": "nhsuk-u-margin-top-4"
-        }) }}
   
       </div>
   
