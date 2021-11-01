@@ -12,31 +12,38 @@ Check your details
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
 
-    <form method="post" action="/account/v8/contact-preferences/contact-preferences">
+    <form method="post" action="auth">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
-              Your email address has changed
+              Check your contact details
             </h1>
           </legend>
 
-          <p>Your email address has been changed to <strong>{{ data.email-addres or 'jonkingston@gmail.com' }}</strong>.
+        <div class="nnhsuk-table-container">
+          <table class="nhsuk-table">
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell"><b>Your current NHS login phone number</b></td>
+                <td class="nhsuk-table__cell ">{{ data.phone-number or '07888364455' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          <div class="nhsuk-warning-callout">
-            <h3 class="nhsuk-warning-callout__label">
-              <span role="text">
-                <span class="nhsuk-u-visually-hidden">Important: </span>
-                Potential delays
-              </span>
-            </h3>
-            <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
-          </div>
+        <p>You will change the phone number on your NHS record to <strong>+447736251423</strong>.</p>
 
+        <div class="nhsuk-u-padding-bottom-2"></div>
+        
         <button class="nhsuk-button" type="submit">
-          Go back to settings
+          Save and continue
         </button>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my NHS record email address</a>
             
         </fieldset>
 

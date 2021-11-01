@@ -9,6 +9,12 @@
 
     <div class="nhsuk-grid-column-two-thirds">
 
+      {{ backLink({
+        "href": "no-email-use-login",
+        "text": "Back to: Your NHS record is missing a contact email address",
+        "classes": "nhsuk-u-margin-top-4"
+      }) }}
+
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 Enter your password
@@ -24,15 +30,12 @@
         <input class="nhsuk-input nhsuk-input--width-20" id="current-password" name="current-password" type="text">
       </div>
 
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="email-enter">
+      <a class="nhsuk-button nhsuk-u-margin-bottom-4" type="submit" href="email-enter">
         Continue
       </a>
+      <br>
 
-      {{ backLink({
-        "href": "/account/v8/login-settings",
-        "text": "I don't want to change my email address",
-        "classes": "nhsuk-u-margin-top-7"
-      }) }}
+      <a href="#">I don't want to change my email address</a>
 
     </div>
 
