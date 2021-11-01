@@ -1,7 +1,7 @@
-{% extends 'layouts/layout-manage-account.html' %}
+{% extends 'layouts/layout.html' %}
 
 {% block pageTitle %}
-  Enter your password to change your phone number
+  Enter your password to change your email address
 {% endblock %}
 
 {% block content %}
@@ -10,13 +10,12 @@
     <div class="nhsuk-grid-column-two-thirds">
 
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
               <h1 class="nhsuk-fieldset__heading">
                 Enter your password
               </h1>
             </legend>
 
-      <p class="nhsuk-body-m nhsuk-hint">We need to make sure it's you before you can change your phone number.</p>
+      <p class="nhsuk-body-m nhsuk-hint">We need to make sure it's you before you can change your email address.</p>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="current-password">
@@ -25,13 +24,13 @@
         <input class="nhsuk-input nhsuk-input--width-20" id="current-password" name="current-password" type="text">
       </div>
 
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="phone-change-number">
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="email-enter">
         Continue
       </a>
 
       {{ backLink({
-        "href": "../index",
-        "text": "I don't want to change my phone number",
+        "href": "/account/v8/login-settings",
+        "text": "I don't want to change my email address",
         "classes": "nhsuk-u-margin-top-7"
       }) }}
 
