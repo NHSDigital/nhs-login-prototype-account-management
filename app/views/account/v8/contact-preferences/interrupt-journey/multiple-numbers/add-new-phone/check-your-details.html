@@ -10,19 +10,13 @@ Check your details
 {% block content %}
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
-  
-
-  {{ backLink({
-        "href": "multiple-numbers-select",
-        "text": "Back to: We have more than one mobile number for you"
-      }) }}
 
 
     <form method="post" action="auth">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
               Check your contact details
             </h1>
@@ -32,27 +26,24 @@ Check your details
           <table class="nhsuk-table">
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
-                <td class="nhsuk-table__cell ">{{ data.mobile-number or '07888364455' }}</td>
-                <td class="nhsuk-table__cell "><a href="#">Change mobile phone number for NHS record</a></td>
+                  <td class="nhsuk-table__cell"><b>Your current NHS login email address</b></td>
+                <td class="nhsuk-table__cell ">{{ data.email-address or 'jonkingston@gmail.com' }}</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="nhsuk-u-padding-bottom-2"></div>
-
-        <p>These changes will not affect your NHS login details.</p>
+        <p>You will change the email address on your NHS record to <strong>jonkingston@gmail.com</strong>.</p>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
-
+        
         <button class="nhsuk-button" type="submit">
           Save and continue
         </button>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
 
-        <a href="/account/v8/contact-preferences/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a>
+        <a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my NHS record email address</a>
             
         </fieldset>
 

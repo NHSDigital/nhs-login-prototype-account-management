@@ -216,7 +216,7 @@ router.post('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/
   } else if (confDetails == "no") {
     res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login')
   } else if (confDetails == "incorrect") {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/add-new-phone/phone-change')
   }
 })
 
@@ -229,7 +229,7 @@ router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email
     //console.log ("Yes")
   }
   else {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/enter-email')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/email-enter')
     //console.log ("No")
   }
 })

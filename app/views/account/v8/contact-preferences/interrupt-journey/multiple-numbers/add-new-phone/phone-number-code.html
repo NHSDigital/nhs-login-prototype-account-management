@@ -1,0 +1,42 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Enter the security code
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Check your phone
+            </h1>
+          </legend>
+
+      <p class="nhsuk-hint">Enter the security code we've sent to {{ data['phone-number']}}</p>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="phone-code">
+          Security code
+        </label>
+        <span class="nhsuk-hint">The code is 6 numbers</span>
+        <input class="nhsuk-input nhsuk-input--width-10" id="phone-code" name="phone-code-10" type="number">
+      </div>
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href=" /account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login">
+        Continue
+      </a>
+
+      {{ backLink({
+        "href": "/account/v8/login-settings",
+        "text": "I don't want to change my phone number",
+        "classes": "nhsuk-u-margin-top-7"
+      }) }}
+
+    </div>
+
+  </div>
+{% endblock %}
