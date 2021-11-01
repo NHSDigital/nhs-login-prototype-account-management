@@ -248,7 +248,7 @@ router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-number
   } else if (confDetails == "no") {
     res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
   } else if (confDetails == "incorrect") {
-    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/add-new-phone/phone-change-number')
   }
 })
 
