@@ -26,7 +26,7 @@ module.exports = function (req, res, next) {
       return res.send('<p>Username or password not set in environment variables.</p>');
     }
 
-    c/*onst user = basicAuth(req)
+    /*const user = basicAuth(req)
 
     if (!user || user.name !== username || user.pass !== password) {
       res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
