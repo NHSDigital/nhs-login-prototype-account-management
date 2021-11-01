@@ -239,16 +239,16 @@ router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email
 router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/multiple-numbers-select', function (req, res) {
   
   // Make a variable and give it the value from 'confirm-details-radio'
-  var confDetails = req.session.data['confirm-details-radio'];
+  var confDetails2 = req.session.data['confirm-details-radio2'];
 
   //Check whether the variable matches a condition below
-  if (confDetails == "yes") {
+  if (confDetails2 == "yes") {
     // Send user to next page
-    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
-  } else if (confDetails == "no") {
-    res.redirect('/account/v8/contact-preferences/check-your-details?=mobile-number')
-  } else if (confDetails == "incorrect") {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/add-new-phone/phone-change-number')
+    res.redirect('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/check-your-details?=mobile-number')
+  } else if (confDetails2 == "no") {
+    res.redirect('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/check-your-details?=mobile-number')
+  } else if (confDetails2 == "incorrect") {
+    res.redirect('/account/v8/contact-preferences/change-mobile-phone/phone-change-number')
   }
 })
 
