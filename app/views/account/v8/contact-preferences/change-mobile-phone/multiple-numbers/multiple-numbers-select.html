@@ -9,20 +9,16 @@
 
     <div class="nhsuk-grid-column-two-thirds">
 
-      {{ backLink({
-        "href": "/account/v8/contact-preferences/contact-preferences-multiple-numbers",
-        "text": "Back to: Contact details on your NHS record"
-      }) }}
 
-      <form method="post">
+      <form method="post" action="check-your-details">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
 
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
-              <h1 class="nhsuk-fieldset__heading">
+        <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+              <h2 class="nhsuk-fieldset__heading">                
                 Which mobile phone number should the NHS use to contact you?
-              </h1>
+              </h2>
         </legend>
 
         <p class="nhsuk-body-m nhsuk-hint">We have more than one mobile phone number for you. The mobile numbers you do not choose will be removed from your NHS record.</p>
@@ -32,21 +28,21 @@
 
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio2" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="yes">
                 07888364455
               </label>
             </div>
       
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="no" name="confirm-details-radio2" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="no" name="confirm-details-radio" type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="no">
                 +447736251423
               </label>
             </div>
 
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio2" type="radio" value="incorrect">
+              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="incorrect">
               <label class="nhsuk-label nhsuk-radios__label" for="yes">
                 I want to use a different phone number
               </label>
@@ -68,7 +64,7 @@
 
       </form>
 
-      <a href="/account/v8/contact-preferences/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a>
+        <a href="#" class="nhsuk-link">I do not want to change my phone number</a>
 
     </div>
 
