@@ -15,14 +15,14 @@
       }) }}
       
       <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
-      <p>These are the details your GP and other NHS services use to contact you. This will not change the contact details on your NHS login.</p>
+      <p>These are the details your GP and other NHS services use to contact you. This will not change your NHS login details.</p>
       <div class="nhsuk-table-container user-info-table">
         <table class="nhsuk-table">
           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell cell-left"><b>Email</b></td>
-              {% if data['user-email'] %}
-              <td class="nhsuk-table__cell">{{ data['user-email'] }}</td>
+              <td class="nhsuk-table__cell cell-left"><b>Email address</b></td>
+              {% if data['emailAddress'] %}
+              <td class="nhsuk-table__cell">{{ data['emailAddress'] }}</td>
                 {% else %}
               <td class="nhsuk-table__cell"><p style="margin: 0px;">jonkingston@gmail.com</p></td>
               {% endif %}
@@ -31,7 +31,7 @@
             </tr>
             
             <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell cell-left"><b>Phone</b></td>
+              <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
               <td class="nhsuk-table__cell cell-left">
                 <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
                   <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
