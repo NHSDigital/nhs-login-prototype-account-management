@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Check your details
+Confirm changes to NHS record
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@ Check your details
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
-              Check your contact details
+              Confirm changes to NHS record
             </h1>
           </legend>
 
@@ -28,7 +28,7 @@ Check your details
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Your chosen email address</b></td>
                 <td class="nhsuk-table__cell ">{{ data.emailAddress or 'jonkingston@gmail.com' }}</td>
-                <td class="nhsuk-table__cell "><a href="#">Change email address for NHS record</a></td>
+                <td class="nhsuk-table__cell "><a href="#">Change email address</a></td>
               </tr>
             </tbody>
           </table>

@@ -4,7 +4,7 @@
 {% from 'back-link/macro.njk' import backLink %}
 
 {% block pageTitle %}
-Check your details
+We have saved your contact details to your NHS record
 {% endblock %}
 
 {% block content %}
@@ -17,13 +17,13 @@ Check your details
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading">
-              We have saved your updated contact details to your NHS record
+              We have saved your contact details to your NHS record
             </h1>
           </legend>
 
           <p>The mobile phone number on your NHS record has been changed to <strong>{{ data.mobileNumber or '07888364455' }}</strong>.
           <p>The email address on your NHS record has been changed to <strong>{{ data.emailAddress or 'jonkingston@gmail.com' }}</strong>.
-          <p>You can update your contact details anytime on your 'Manage your NHS Account' page.</p>
+          <p>You can update your contact details anytime on the 'Manage your NHS Account' page.</p>
 
           <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label">
@@ -32,7 +32,7 @@ Check your details
                 Potential delays
               </span>
             </h3>
-            <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
+            <p>There may be a delay before your details are completely updated across all NHS services, like your GP surgery.</p>
           </div>
 
         <button class="nhsuk-button" type="submit">

@@ -1,7 +1,7 @@
 {% extends 'layouts/layout-manage-account.html' %}
 
 {% block pageTitle %}
-  Your email address has been changed
+  We have saved your contact details to your NHS record
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     <div class="nhsuk-grid-column-two-thirds">
       <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
       <h1 class="nhsuk-fieldset__legend--l">
-          Email address changed
+          We have saved your contact details to your NHS record
       </h1>
       
       <p>Your email address on your NHS record has been changed to <b>{{ data.emailAddress or 'mail@mail.com' }}</b>.
@@ -21,7 +21,7 @@
           Potential delays
         </span>
       </h3>
-      <p>Some NHS services, like your GP, may continue to use your previous contact email address until they update their records.</p>
+      <p>There may be a delay before your details are completely updated across all NHS services, like your GP surgery.</p>
       </div>
 
       <div class="nhsuk-form-group">
