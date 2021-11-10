@@ -11,7 +11,7 @@ Check your details
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
 
-    <form method="post" action="auth">
+    <form method="post" action="../multiple-numbers/auth-no-email">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -25,13 +25,13 @@ Check your details
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
                 <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
-                <td class="nhsuk-table__cell ">{{ data.mobile or '07888364455' }}</td>
+                <td class="nhsuk-table__cell ">{{ data.mobileNumber or '07888364455' }}</td>
                 <td class="nhsuk-table__cell "><a href="../multiple-numbers/multiple-numbers-select">Change mobile phone number</a></td>
               </tr>
               <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>Your chosen email address</b></td>
-                <td class="nhsuk-table__cell ">{{ data.emailAddress or 'jonkingston@gmail.com' }}</td>
-                <td class="nhsuk-table__cell "><a href="no-email-use-login">Change email address</a></td>
+                <td class="nhsuk-table__cell"><p class="nhsuk-hint">None selected</p></td>
+                <td class="nhsuk-table__cell "><a href="no-email-use-login">Add NHS login email address</a></td>
               </tr>
             </tbody>
           </table>

@@ -229,7 +229,7 @@ router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email
     //console.log ("Yes")
   }
   else {
-    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/check-your-details')
+    res.redirect('/account/v8/contact-preferences/interrupt-journey/no-email/check-your-details-no-email')
     //console.log ("No")
   }
 })

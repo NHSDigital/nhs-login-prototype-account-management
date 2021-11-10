@@ -25,7 +25,7 @@
                   </h1>
             </legend>
 
-            <p class="nhsuk-body-m">You use <strong>jonkingston@gmail.com</strong> for your NHS login. You can add this to your NHS record. This means your GP and other NHS services may use it to contact you.</p>
+            <p class="nhsuk-body-m">You use <strong>{{ data.emailAddress or 'jonkingston@gmail.com' }}</strong> for your NHS login. You can add this to your NHS record. This means your GP and other NHS services may use it to contact you.</p>
 
             <h2 class="nhsuk-heading-m">Do you want to add the email address you use for NHS login?</h2>
 
@@ -60,7 +60,9 @@
       
       <div class="nhsuk-u-padding-bottom-4"></div>
 
-        <a href="#" class="nhsuk-link">Cancel and take me to the NHS App</a>
+      <p class="nhsuk-body">
+        <a href="../interrupt-skip-app" class="nhsuk-link"  title="Skip link">Cancel and take me to the NHS App</a>
+      </p>
 
     </div>
 
