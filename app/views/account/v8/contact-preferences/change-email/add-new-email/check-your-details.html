@@ -27,7 +27,7 @@ Check your details
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
                   <td class="nhsuk-table__cell"><b>Your current NHS login email address</b></td>
-                <td class="nhsuk-table__cell ">{{ data.email-address or 'jonkingston@gmail.com' }}</td>
+                <td class="nhsuk-table__cell ">{{ data.emailAddress or 'jonkingston@gmail.com' }}</td>
               </tr>
             </tbody>
           </table>
@@ -43,7 +43,9 @@ Check your details
 
         <div class="nhsuk-u-padding-bottom-2"></div>
 
-        <a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my NHS record email address</a>
+        <p>
+          <a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my NHS record email address</a>
+        </p>
             
         </fieldset>
 
