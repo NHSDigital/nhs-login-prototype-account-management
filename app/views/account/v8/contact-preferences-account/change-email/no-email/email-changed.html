@@ -1,0 +1,50 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+We have saved your contact details to your NHS record
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+    <form method="post" action="/account/v8/contact-preferences-account/contact-preferences">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+            <h1 class="nhsuk-fieldset__heading">
+              We have saved your contact details to your NHS record
+            </h1>
+          </legend>
+
+          <p>The email address on your NHS record has been changed to <strong>{{ data.emailAddress or 'jonkingston@gmail.com' }}</strong>.
+
+          <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+              <span role="text">
+                <span class="nhsuk-u-visually-hidden">Important: </span>
+                Potential delays
+              </span>
+            </h3>
+            <p>There may be a delay before your details are updated across all NHS services, like your GP surgery.</p>
+            <p>If you are expecting an important phone call or email from an NHS service, you may wish to contact them directly to update your details.</p>
+          </div>
+
+        <button class="nhsuk-button" type="submit">
+          Go back to settings
+        </button>
+            
+        </fieldset>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

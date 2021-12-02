@@ -1,0 +1,54 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% block pageTitle %}
+  Your email address has been changed
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+      <h1 class="nhsuk-heading-l">
+      Check your email
+      </h1>
+
+      <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
+      
+      <p>You need to use this code within <b>1 hour</b> or it will expire.</p>
+
+      <p><a href="email-sent-resend" class="nhsuk-link">Request a new security code</a></p>
+
+      <form action="check-your-details-new" method="post">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="input-with-hint-text">
+            Security code
+          </label>
+          <span class="nhsuk-hint" id="otp-hint-text">
+            The code is 6 numbers
+          </span>
+          <input
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type="number" maxlength="6" class="nhsuk-input nhsuk-input--width-10" id="input-with-hint-text" name="otp"
+            type="number" aria-describedby="security-code-input">
+        </div>
+
+
+        <fieldset class="nhsuk-fieldset">
+          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'mail@mail.com' }} type="hidden">
+        </fieldset>
+        <button data-redirect="email-confirmed" class="nhsuk-button"
+          id="button--save">Continue</button>
+      
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <p>If you did not get a security code, check your spam folder or <a href="enter-email">enter your new email address to try again.</a></p>
+
+        <p><a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my email address</a></p>
+
+    </form>
+
+    </div>
+
+  </div>
+{% endblock %}

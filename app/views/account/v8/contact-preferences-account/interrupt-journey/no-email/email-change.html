@@ -1,0 +1,43 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Enter your password to change your email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "no-email-use-login",
+        "text": "Back to: Your NHS record is missing a contact email address",
+        "classes": "nhsuk-u-margin-top-4"
+      }) }}
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Enter your password
+              </h1>
+            </legend>
+
+      <p class="nhsuk-body-m nhsuk-hint">We need to make sure it's you before you can change your email address.</p>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="current-password">
+          Current password
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="current-password" name="current-password" type="text">
+      </div>
+
+      <a class="nhsuk-button nhsuk-u-margin-bottom-4" type="submit" href="email-enter">
+        Continue
+      </a>
+      <br>
+
+      <a href="#">I don't want to change my email address</a>
+
+    </div>
+
+  </div>
+{% endblock %}

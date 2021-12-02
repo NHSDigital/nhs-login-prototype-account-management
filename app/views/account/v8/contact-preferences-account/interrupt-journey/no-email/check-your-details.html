@@ -1,0 +1,62 @@
+{% extends 'layouts/layout.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Confirm changes to NHS record
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+    <form method="post" action="auth">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Confirm changes to NHS record
+            </h1>
+          </legend>
+
+        <div class="nnhsuk-table-container">
+          <table class="nhsuk-table">
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
+                <td class="nhsuk-table__cell ">{{ data.mobile or '07888364455' }}</td>
+                <td class="nhsuk-table__cell "><a href="../multiple-numbers/multiple-numbers-select">Change mobile phone number</a></td>
+              </tr>
+              <tr class="nhsuk-table__row">
+                  <td class="nhsuk-table__cell"><b>Your chosen email address</b></td>
+                <td class="nhsuk-table__cell ">{{ data.emailAddress or 'jonkingston@gmail.com' }}</td>
+                <td class="nhsuk-table__cell "><a href="no-email-use-login">Change email address</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>These changes will not affect your NHS login details.</p>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+        
+        <button class="nhsuk-button" type="submit">
+          Save and continue
+        </button>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <p class="nhsuk-body">
+          <a href="../interrupt-skip-app" class="nhsuk-link"  title="Skip link">Cancel and take me to the NHS App</a>
+        </p>
+            
+        </fieldset>
+
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Enter your password to change your phone number
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "/account/v8/contact-preferences-account/interrupt-journey/contact-update-interrupt",
+        "text": "Back to: The contact details on your NHS record could be out of date"
+      }) }}
+
+        <h1 class="nhsuk-heading-l">
+                We have more than one mobile phone number for you
+        </h1>
+
+      <form method="post">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+              <h2 class="nhsuk-fieldset__heading">
+                Which mobile phone number should the NHS use to contact you?
+              </h2>
+        </legend>
+
+        <p class="nhsuk-body-m nhsuk-hint">We will remove the other mobile numbers from your NHS record.</p>
+
+        <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                07888364455
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="no" name="confirm-details-radio" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="no">
+                +447736251423
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="yes" name="confirm-details-radio" type="radio" value="incorrect">
+              <label class="nhsuk-label nhsuk-radios__label" for="yes">
+                +447736251426
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+        </div>
+        
+          
+        </fieldset>
+
+      </div>
+      <div class="nhsuk-u-padding-bottom-2"></div>
+        <!-- href="check-your-details" -->
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+      <p class="nhsuk-body">
+        <a href="../interrupt-skip-app" class="nhsuk-link"  title="Skip link">Cancel and take me to the NHS App</a>
+      </p>
+
+
+    </div>
+
+  </div>
+{% endblock %}

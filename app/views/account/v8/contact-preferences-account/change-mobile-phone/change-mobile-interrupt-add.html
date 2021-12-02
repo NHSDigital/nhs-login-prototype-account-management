@@ -1,0 +1,66 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% block pageTitle %}
+  Manage your NHS account
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+  {{ backLink({
+        "href": "/account/v8/contact-preferences-account/contact-preferences",
+        "text": "Back to: Contact details on your NHS record"
+      }) }}
+      
+    <div class="nhsuk-card nhsuk-card">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-l">
+                You want to add a mobile phone number
+              </h2>
+              <div class="nhsuk-warning-callout">
+            <h3 class="nhsuk-warning-callout__label">
+              <span role="text">
+                <span class="nhsuk-u-visually-hidden">Important: </span>
+                Potential delays
+              </span>
+            </h3>
+            <p>There may be a delay before your details are updated across all NHS services, like your GP surgery.</p>
+            <p>If you are expecting an important phone call or email from an NHS service, you may wish to contact them directly to update your details.</p>
+          </div>
+              <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="phone-change">
+                Continue
+              </a>
+              <br><br>
+              <p>
+                <a href="/contact-preferences-account/index" class="nhsuk-link">I do not want to change my phone number</a>
+              </p>
+            </div>
+          </div>
+
+      <!--
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="{{ params }}?has-recovery-email=1">User has recovery email</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+      -->
+
+    </div>
+
+  </div>
+
+{% endblock %}
+

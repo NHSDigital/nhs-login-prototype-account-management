@@ -1,0 +1,41 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% block pageTitle %}
+  Enter your new email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="email-sent" method="post" class="form">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your new email address
+            </h1>
+          </legend>
+          <div class="nhsuk-form-group">
+            <span class="nhsuk-hint">
+              We will send you a 6 digit security code for you to confirm your new email address.
+            </span>
+            <label class="nhsuk-label" for="email-code">
+              New email address
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-half" id="user-email" name="user-email" value="{{ data['user-email'] }}" type="text">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button">Continue</button>
+      
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my email address</a>
+        
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

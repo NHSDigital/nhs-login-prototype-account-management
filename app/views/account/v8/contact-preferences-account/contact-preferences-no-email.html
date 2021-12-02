@@ -1,0 +1,68 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% block pageTitle %}
+  Manage your NHS account
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-three-quarters">
+
+  {{ backLink({
+        "href": "../index",
+        "text": "Back to: Manage your NHS account"
+      }) }}
+      
+      <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
+      <p>These are the details your GP and other NHS services use to contact you. This will not change your NHS login details.</p>
+      <div class="nhsuk-table-container user-info-table">
+        <table class="nhsuk-table">
+          <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell cell-left"><b>Email address</b></td>
+              <td class="nhsuk-table__cell cell-left">
+                <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
+                  <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="nhsuk-warning-text__text">
+                    <span class="nhsuk-warning-text__assistive">Important</span>
+                  Your email address is not on your NHS record
+                  </strong>
+                </div>
+              </td>
+              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences-account/change-email/change-email-interrupt-add?=no-email">Add an email address to your NHS record</a></td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
+              <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;455</td>
+              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences-account/change-mobile-phone/change-mobile-interrupt">Change phone number</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="contact-preferences">User has all details (change details)</a></li>
+            <li><a href="contact-preferences-multiple-numbers">User has multiple numbers</a></li>
+            <li><a href="contact-preferences-no-email">User has no email</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock %}
+

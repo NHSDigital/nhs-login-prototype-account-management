@@ -1,0 +1,44 @@
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  Enter your new email address
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ backLink({
+        "href": "no-email-use-login",
+        "text": "Back to: Your NHS record is missing a contact email address",
+        "classes": "nhsuk-u-margin-top-4"
+      }) }}
+
+      <form action="email-sent" method="post" class="form">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Enter your email address
+            </h1>
+          </legend>
+          <div class="nhsuk-form-group">
+            <span class="nhsuk-hint">
+              We will send you a 6 digit security code for you to confirm your new email address.
+            </span>
+            <label class="nhsuk-label" for="email-code">
+              New email address
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-half" id="user-email" name="user-email" value="{{ data['user-email'] }}" type="text">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button">Continue</button>
+        
+      </form>
+
+      <a href="#">I don't want to change my email address</a>
+
+    </div>
+
+  </div>
+{% endblock %}
