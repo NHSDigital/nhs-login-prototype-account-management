@@ -16,7 +16,7 @@
             </h1>
           </legend>
 
-      <p class="nhsuk-hint">Enter the security code we've sent to  {{ data.mobile or '07888364455' }}</p>
+      <p class="nhsuk-hint">Enter the security code we've sent to  <strong>{{ data.mobile or '07888364455' }}</strong>.</p>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="phone-code">
@@ -26,15 +26,11 @@
         <input class="nhsuk-input nhsuk-input--width-10" id="phone-code" name="phone-code-10" type="number">
       </div>
 
-      <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="multiple-numbers/check-your-details">
+      <a class="nhsuk-button" type="submit" href="multiple-numbers/check-your-details">
         Continue
       </a>
 
-      {{ backLink({
-        "href": "../index",
-        "text": "I don't want to change my phone number",
-        "classes": "nhsuk-u-margin-top-7"
-      }) }}
+      <p><a href="../index"  class="nhsuk-link">I don't want to change my phone number</a></p>
 
     </div>
 
