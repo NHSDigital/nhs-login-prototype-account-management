@@ -1,0 +1,86 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Confirm changes to NHS record
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+    <form method="post" action="auth">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Confirm changes to NHS record
+            </h1>
+          </legend>
+
+        <div class="nnhsuk-table-container">
+          <table class="nhsuk-table">
+            <tbody class="nhsuk-table__body">
+              <tr class="nhsuk-table__row">
+                <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
+                <td class="nhsuk-table__cell ">{{ data.mobileNumber or '07888364455' }}</td>
+                <td class="nhsuk-table__cell "><a href="#">Change mobile phone number</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <p>These changes will not affect your NHS login details.</p>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <button class="nhsuk-button" type="submit">
+          Save and continue
+        </button>
+
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <p>
+          <a href="/account/v8/contact-preferences-account/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a>
+        </p>
+            
+        </fieldset>
+
+      </div>
+    </form>
+
+    {% if data['devMode'] %}
+    <details class="nhsuk-details dev-mode" role="group">
+      <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+        <span class="nhsuk-details__summary-text">
+          Continue with testing scenario
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        <p>Routes</p>
+        <ul>
+          <li><a href="../demo/enter-name">User doesn't know NHS number</a></li>
+        </ul>
+        <p>Errors</p>
+        <ul>
+          <li><a href="../errors/error-radio-no-input">Field validation</a></li>
+          <li><a href="../errors/error-nhs-number-digits-exceeded">>10 digits entered</a></li>
+          <li><a href="../errors/error-nhs-number-field-validation">No NHS number on record</a></li>
+          <li><a href="../errors/error-nhs-number-no-input">No user input</a></li>
+          <li><a href="../errors/error-nhs-number-national-insurance">National insurance number input</a></li>
+          <li><a href="../errors/error-nhs-number-numbers-and-letters">More or less than 10 numbers and includes letters</a></li>
+        </ul>
+      </div>
+    </details>
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}
