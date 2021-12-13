@@ -51,7 +51,7 @@
 
 
         <fieldset class="nhsuk-fieldset">
-          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'mail@mail.com' }} type="hidden">
+          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'alex.taylor@hotmail.com' }} type="hidden">
         </fieldset>
         <button data-redirect="email-confirmed" class="nhsuk-button"
           id="button--save">Continue</button>
@@ -59,7 +59,7 @@
     </form>
 
       {{ backLink({
-        "href": "/account/v8/login-settings",
+        "href": "/account/v8/contact-preferences-account/contact-preferences",
         "text": "I do not want to change my email address",
         "classes": "nhsuk-u-margin-top-7"
       }) }}
