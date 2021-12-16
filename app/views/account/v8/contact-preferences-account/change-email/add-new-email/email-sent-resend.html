@@ -18,7 +18,7 @@
         <p>You have been sent a new security code.</p>
       </div>
 
-      <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'mail@mail.com' }}</b></a> to confirm this is your email address.</p>
+      <p>Enter the 6 digit security code we’ve sent to <a href="/emails/email-security-code" target="_blank" style="color: #212b32; text-decoration: none;"><b>{{ data.emailAddress or 'alex.taylor@hotmail.com' }}</b></a> to confirm this is your email address.</p>
       
       <p>You need to use this code within <b>1 hour</b> or it will expire.</p>
 
@@ -51,7 +51,7 @@
 
 
         <fieldset class="nhsuk-fieldset">
-          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'mail@mail.com' }} type="hidden">
+          <input id="emailAddress" name="emailAddress" value= {{ data.emailAddress or 'alex.taylor@hotmail.com' }} type="hidden">
         </fieldset>
         <button data-redirect="email-confirmed" class="nhsuk-button"
           id="button--save">Continue</button>
@@ -59,7 +59,7 @@
     </form>
 
       {{ backLink({
-        "href": "/account/v8/login-settings",
+        "href": "/account/v8/contact-preferences-account/contact-preferences",
         "text": "I do not want to change my email address",
         "classes": "nhsuk-u-margin-top-7"
       }) }}

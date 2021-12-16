@@ -266,6 +266,22 @@ router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-
   }
 })
 
+// Update other details
+
+router.post('/account/v8/contact-preferences-account/change-mobile-phone/phone-changed', function (req, res) {
+  
+  // Make a variable and give it the value from 'update-details-radio'
+  var updateDetails = req.session.data['update-details-radio'];
+
+  //Check whether the variable matches a condition below
+  if (updateDetails == "yes") {
+    // Send user to next page
+    res.redirect('/account/v8/contact-preferences-account/change-mobile-phone/update-other-details/check-your-details')
+  } else {
+    res.redirect('/account/v8/contact-preferences-account/account-settings')
+  }
+})
+
 
 
 // Dev Mode

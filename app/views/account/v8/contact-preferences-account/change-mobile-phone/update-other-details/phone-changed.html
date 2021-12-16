@@ -1,0 +1,42 @@
+{% extends 'layouts/layout-manage-account-settings.html' %}
+
+{% from 'button/macro.njk' import button %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% block pageTitle %}
+Your  NHS login mobile phone number has changed
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+
+    <form method="post" action="/account/v8/contact-preferences-account/account-settings">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS login</span>
+            <h1 class="nhsuk-fieldset__heading">
+              Your  NHS login mobile phone number has changed
+            </h1>
+          </legend>
+
+          <p>The mobile phone number on your NHS login has been changed to <strong>{{ data.mobileNumber or '07888364455' }}</strong>.</p>
+
+          </div>
+          <div class="nhsuk-u-padding-bottom-2"></div>
+            <!-- href="check-your-details" -->
+            <button class="nhsuk-button" type="submit">
+              Go back to settings
+            </button>
+                
+            </fieldset>
+
+          </div>
+        </form>
+
+  </div>
+</div>
+
+{% endblock %}

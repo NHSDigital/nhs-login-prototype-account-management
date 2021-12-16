@@ -10,13 +10,13 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number for NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
               Check your phone
             </h1>
           </legend>
 
-      <p class="nhsuk-hint">Enter the security code we've sent to  <strong>{{ data.mobile or '07888364455' }}</strong>.</p>
+      <p class="nhsuk-hint">Enter the security code we've sent to  <strong>{{ data.mobileNumber or '07888364455' }}</strong>.</p>
 
       <div class="nhsuk-form-group">
         <label class="nhsuk-label" for="phone-code">
@@ -26,11 +26,11 @@
         <input class="nhsuk-input nhsuk-input--width-10" id="phone-code" name="phone-code-10" type="number">
       </div>
 
-      <a class="nhsuk-button" type="submit" href="multiple-numbers/check-your-details">
+      <a class="nhsuk-button" type="submit" href="check-your-details">
         Continue
       </a>
 
-      <p><a href="../index"  class="nhsuk-link">I don't want to change my phone number</a></p>
+      <p><a href="/account/v8/contact-preferences-account/contact-preferences"  class="nhsuk-link">I don't want to change my phone number</a></p>
 
     </div>
 

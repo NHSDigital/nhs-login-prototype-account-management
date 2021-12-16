@@ -1,7 +1,7 @@
 {% extends 'layouts/layout-manage-account-settings.html' %}
 
 {% block pageTitle %}
-  Manage your NHS account
+  You want to add a mobile phone number
 {% endblock %}
 
 {% block content %}
@@ -13,28 +13,26 @@
         "href": "/account/v8/contact-preferences-account/contact-preferences",
         "text": "Back to: Contact details on your NHS record"
       }) }}
-      
-    <div class="nhsuk-card nhsuk-card">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-l">
+
+              <h2 class="nhsuk-heading-l">
                 You want to add a mobile phone number
               </h2>
               <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label">
               <span role="text">
                 <span class="nhsuk-u-visually-hidden">Important: </span>
-                Potential delays
+                There may be a delay
               </span>
             </h3>
-            <p>There may be a delay before your details are updated across all NHS services, like your GP surgery.</p>
-            <p>If you are expecting an important phone call or email from an NHS service, you may wish to contact them directly to update your details.</p>
+            <p>This is because some NHS services, such as your GP surgery, may not see your request to update your mobile phone number straight away.</p>
+            <p>If you're waiting for an important phone call from an NHS service you can contact them directly to update your mobile phone number.</p>
           </div>
               <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="phone-change">
                 Continue
               </a>
               <br><br>
               <p>
-                <a href="/contact-preferences-account/index" class="nhsuk-link">I do not want to change my phone number</a>
+                <a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my phone number</a>
               </p>
             </div>
           </div>

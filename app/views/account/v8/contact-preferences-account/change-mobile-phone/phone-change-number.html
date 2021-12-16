@@ -12,7 +12,7 @@
         <fieldset class="nhsuk-fieldset">
 
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change phone number for NHS record</span>
+          <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
               Enter your mobile number
             </h1>
@@ -43,22 +43,19 @@
                       <span class="nhsuk-hint nhsuk-checkboxes__conditional__hint" id="example-hints-1-item-hint">
                         Please enter + and then your country code before your phone number. For example, <b>+353</b>7777666555
                       </span>
-                      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobile" type="text">
+                      <input class="nhsuk-input nhsuk-u-width-two-thirds" id="mobile" name="mobileNumber" type="text">
                     </div> <!-- end nhsuk-form-group --> 
                   </div> <!-- end nhsuk-checkboxes__conditional -->
                 </div> <!-- end nhsuk-checkboxes -->
               </fieldset> <!-- nhsuk-fieldset -->
             </div> <!-- end nhsuk-form-group -->
 
-            <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="phone-number-code">
+            <a class="nhsuk-button" type="submit" href="phone-number-code">
               Continue
             </a>
 
-            {{ backLink({
-              "href": "../index",
-              "text": "I don't want to change my phone number",
-              "classes": "nhsuk-u-margin-top-7"
-            }) }}
+            <div class="nhsuk-u-padding-bottom-2"></div>
+              <p><a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my phone number</a></p>
           
         </fieldset>
       </form> <!-- end form -->

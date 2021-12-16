@@ -16,9 +16,9 @@ Confirm changes to NHS record
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS login</span>
             <h1 class="nhsuk-fieldset__heading">
-              Confirm changes to NHS record
+              Confirm changes to NHS login
             </h1>
           </legend>
 
@@ -26,30 +26,33 @@ Confirm changes to NHS record
           <table class="nhsuk-table">
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell"><b>Your current NHS login email address</b></td>
-                <td class="nhsuk-table__cell ">{{ data.emailAddress or 'alex.taylor@hotmail.com' }}</td>
+                <td class="nhsuk-table__cell"><b>Your current NHS login phone number</b></td>
+                <td class="nhsuk-table__cell ">07736251429</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>You will change the email address on your NHS record to <strong>alextaylor@gmail.com</strong>.</p>
+        <div class="nhsuk-u-padding-bottom-2"></div>
+
+        <p>You will change the mobile phone number on your NHS login to <strong>{{ data.mobileNumber or '07888364455' }}</strong></p>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
-        
+
         <button class="nhsuk-button" type="submit">
           Save and continue
         </button>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
-        <p><a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my email address</a></p>
+
+        <p>
+          <a href="/account/v8/contact-preferences-account/contact-preferences" class="nhsuk-link">I do not want to change my phone number</a>
+        </p>
             
         </fieldset>
 
       </div>
     </form>
-
-
 
   </div>
 </div>
