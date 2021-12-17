@@ -9,45 +9,26 @@
 
     <div class="nhsuk-grid-column-two-thirds">
 
-  {{ backLink({
-        "href": "/account/v8/contact-preferences/contact-preferences-multiple-numbers",
-        "text": "Back to: Contact details on your NHS record"
-      }) }}
-      
-    <div class="nhsuk-card nhsuk-card">
-            <div class="nhsuk-card__content">
-              <h2 class="nhsuk-card__heading nhsuk-heading-l">
-                You want to update your  mobile phone number
-              </h2>
-              <p class="nhsuk-card__description">There may be a delay before your details are completely updated across all NHS services, like your GP surgery.</p>
-              <a class="nhsuk-button nhsuk-u-margin-bottom-0" type="submit" href="multiple-numbers-select">
-                Continue
-              </a>
-              <br><br>
-              <p>
-                <a href="/account/v8/contact-preferences/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a>
-              </p>
-            </div>
-          </div>
+      {{ backLink({
+            "href": "/account/v8/contact-preferences/contact-preferences-multiple-numbers",
+            "text": "Back to: Contact details on your NHS record"
+          }) }}
+          
+        <div class="nhsuk-card nhsuk-card">
+                <div class="nhsuk-card__content">
+                  <h2 class="nhsuk-card__heading nhsuk-heading-l">
+                    You want to update your  mobile phone number
+                  </h2>
+                  <p class="nhsuk-card__description">There may be a delay before your details are completely updated across all NHS services, like your GP surgery.</p>
+                  <a class="nhsuk-button" type="submit" href="multiple-numbers-select">
+                    Continue
+                  </a>
 
-      <!--
-      {% if data['devMode'] %}
-      <details class="nhsuk-details dev-mode" role="group">
-        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-          <span class="nhsuk-details__summary-text">
-            Continue with testing scenario
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p>Recovery</p>
-          <ul>
-            <li><a href="{{ params }}?has-recovery-email=1">User has recovery email</a></li>
-          </ul>
+                  <div class="nhsuk-u-padding-bottom-2"></div>
+                  <p><a href="/account/v8/contact-preferences/contact-preferences-mulitple-numbers" class="nhsuk-link">I do not want to change my phone number</a></p>
+                
+                </div>
         </div>
-      </details>
-
-      {% endif %}
-      -->
 
     </div>
 
