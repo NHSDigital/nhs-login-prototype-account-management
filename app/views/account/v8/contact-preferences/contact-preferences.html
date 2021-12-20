@@ -21,17 +21,13 @@
           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Email address</b></td>
-              {% if data['emailAddress'] %}
-              <td class="nhsuk-table__cell">{{ data['emailAddress'] }}</td>
-                {% else %}
-              <td class="nhsuk-table__cell"><p style="margin: 0px;">jonkingston@gmail.com</p></td>
-              {% endif %}
+              <td class="nhsuk-table__cell"><p style="margin: 0px;">{{ data.emailAddress or 'jonkingston@gmail.com' }}</p></td>
               </td>
               <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt?=change-details">Change email address</a></td>
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
-              <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;455</td>
+              <td class="nhsuk-table__cell ">{{ data.mobileNumber or '07888364455' }}</td>
               <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-mobile-phone/change-mobile-interrupt">Change phone number</a></td>
             </tr>
           </tbody>
