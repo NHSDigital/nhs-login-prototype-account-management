@@ -8194,6 +8194,10 @@ details.dev-mode summary, details.dev-mode ol {
   text-align: right;
 }
 
+.nhsuk-table-responsive.user-info-table {
+  margin-top: 0px !important;
+}
+
 .nhsuk-expander.version-list {
   background-color: #F0F4F5 !important;
 }
