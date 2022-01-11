@@ -1,19 +1,19 @@
 {% extends 'layouts/layout-manage-account-settings' %}
 
 {% block pageTitle %}
-  We have saved your contact details to your NHS record
+  We have saved your contact details to your GP record
 {% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
 
     <div class="nhsuk-grid-column-two-thirds">
-      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+      <span class="nhsuk-hint nhsuk-u-margin-bottom-2">Change email address on GP record</span>
       <h1 class="nhsuk-fieldset__legend--l">
-          We have saved your contact details to your NHS record
+          We have saved your contact details to your GP record
       </h1>
       
-      <p>Your email address on your NHS record has been changed to <b>{{ data.emailAddress or 'alextaylor@gmail.com }}</b>.
+      <p>Your email address on your GP record has been changed to <b>{{ data.emailAddress or 'alextaylor@gmail.com }}</b>.
       <div class="nhsuk-warning-callout">
       <h3 class="nhsuk-warning-callout__label">
         <span role="text">
