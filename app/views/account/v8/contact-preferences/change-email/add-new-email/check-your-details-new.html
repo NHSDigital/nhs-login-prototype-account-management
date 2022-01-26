@@ -21,22 +21,20 @@ Confirm changes to NHS record
               Confirm changes to NHS record
             </h1>
           </legend>
-
+        <p><b>You have chosen to change your email address to</b></p>
         <div class="nnhsuk-table-container">
           <table class="nhsuk-table">
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><b>Your chosen email address</b></td>
                 <td class="nhsuk-table__cell ">{{ data.emailAddress or 'jonkingston@gmail.com' }}</td>
-                <td class="nhsuk-table__cell "><a href="#">Change email address</a></td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <div class="nhsuk-u-padding-bottom-2"></div>
-
-        <p>These changes will not affect your NHS login details.</p>
+        
+        <p>If this is not correct, you can <a href="/email-enter">change your email address</a></p>
+        <p>These changes will not affect your NHS login.</p>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
 
@@ -45,7 +43,7 @@ Confirm changes to NHS record
         </button>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
-        <p><a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my email address</a></p>
+        <p><a href="/account/v8/contact-preferences/contact-preferences-no-email" class="nhsuk-link">I do not want to change my NHS record email address</a></p>
             
         </fieldset>
 
