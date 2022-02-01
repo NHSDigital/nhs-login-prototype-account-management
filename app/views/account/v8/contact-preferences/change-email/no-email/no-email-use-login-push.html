@@ -1,0 +1,44 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% block pageTitle %}
+  Do you want to add your NHS login email address to your NHS record?
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+     
+
+      <form method="POST">
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change email address on NHS record</span>
+                  <h1 class="nhsuk-fieldset__heading">
+                    You must use your NHS login email to update your NHS record
+                  </h1>
+            </legend>
+
+            <p class="nhsuk-body-m">You can only update your NHS record with your NHS login email address.</p>
+
+            <p class="nhsuk-body-m"><a href="/account/v8/contact-preferences/change-email/no-email/no-email-use-login">Go back and use your NHS login email</a></p>
+            <p class="nhsuk-body-m">You can view your NHS record contact details by selecting the button below</p>
+          </fieldset>
+
+        </div>
+
+        <button class="nhsuk-button" type="submit">
+          Back to contact details
+        </button>
+
+      </form>
+      
+    
+    </div>
+
+  </div>
+{% endblock %}

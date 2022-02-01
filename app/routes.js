@@ -261,11 +261,14 @@ router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-
     //console.log ("Yes")
   }
   else {
-    res.redirect('/account/v8/contact-preferences/change-email/no-email/email-change')
+    res.redirect('/account/v8/contact-preferences/change-email/no-email/no-email-use-login-push')
     //console.log ("No")
   }
 })
 
+router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login-push', function (req, res){
+  res.redirect('/account/v8/index?route=3')
+})
 // Update other details
 
 router.post('/account/v8/contact-preferences-account/change-mobile-phone/phone-changed', function (req, res) {
