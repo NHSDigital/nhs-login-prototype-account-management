@@ -12,7 +12,9 @@
  * @returns {function} Express 4 middleware requiring the given credentials
  */
 // External dependencies
-const basicAuth = require('basic-auth');
+
+// Remove this line if we don't want password
+ // const basicAuth = require('basic-auth');
 
 module.exports = function (req, res, next) { /* eslint-disable-line consistent-return */
   // Set configuration variables
@@ -25,12 +27,15 @@ module.exports = function (req, res, next) { /* eslint-disable-line consistent-r
       return res.send('<p>Username or password not set in environment variables.</p>');
     }
 
-    const user = basicAuth(req);
+  // Remove these lines if we don't want password
+    // const user = basicAuth(req);
 
-    if (!user || user.name !== username || user.pass !== password) {
-      res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-      return res.sendStatus(401);
-    }
+    // if (!user || user.name !== username || user.pass !== password) {
+    //   res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+    //   return res.sendStatus(401);
+    // }
+  // up to here!
+
   }
   next();
 };
