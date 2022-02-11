@@ -49,7 +49,7 @@
               <p class="nhsuk-card__description">This is what your GP and other NHS services have on record for you. </p>
             </div>
           </div>
-          {% else %}
+          {% elif data['route'] === '3' %}
           <div class="nhsuk-card nhsuk-card--clickable">
             <div class="nhsuk-card__content">
               <h2 class="nhsuk-card__heading nhsuk-heading-m">
@@ -58,6 +58,54 @@
               <p class="nhsuk-card__description">This is what your GP and other NHS services have on record for you. </p>
             </div>
           </div>
+          {% elif data['route'] === '4' %}
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="contact-preferences/contact-preferences-no-phone">Contact details on your NHS record</a>
+              </h2>
+              <p class="nhsuk-card__description">This is what your GP and other NHS services have on record for you. </p>
+            </div>
+          </div>
+          {% elif data['route'] === '5' %}
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="contact-preferences/contact-preferences-no-email-no-phone">Contact details on your NHS record</a>
+              </h2>
+              <p class="nhsuk-card__description">This is what your GP and other NHS services have on record for you. </p>
+            </div>
+          </div>
+          {% else %}
+          <div class="nhsuk-card nhsuk-card--clickable">
+            <div class="nhsuk-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="contact-preferences/contact-preferences">Contact details on your NHS record</a>
+              </h2>
+              <p class="nhsuk-card__description">This is what your GP and other NHS services have on record for you. </p>
+            </div>
+          </div>
+          {% endif %}
+
+          {% if data['devMode'] %}
+          <details class="nhsuk-details dev-mode" role="group">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+              <span class="nhsuk-details__summary-text">
+                Continue with testing scenario
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>NHS record contact details</p>
+              <ul>
+                <li><a href="/account/v8/index?route=1">User has all details</a></li>
+                <li><a href="/account/v8/index?route=2">User has multiple numbers</a></li>
+                <li><a href="/account/v8/index?route=3">User has no email on record</a></li>
+                <li><a href="/account/v8/index?route=4">User has no phone on record</a></li>
+                <li><a href="/account/v8/index?route=5">User has no email or phone on record</a></li>
+              </ul>
+            </div>
+          </details>
+    
           {% endif %}
 
     </div>
@@ -130,27 +178,12 @@
 
 
     </div>
+  -->
 
+      
+    
 
-      {% if data['devMode'] %}
-      <details class="nhsuk-details dev-mode" role="group">
-        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
-          <span class="nhsuk-details__summary-text">
-            Continue with testing scenario
-          </span>
-        </summary>
-        <div class="nhsuk-details__text">
-          <p>Recovery</p>
-          <ul>
-            <li><a href="{{ params }}?has-recovery-email=1">User has recovery email</a></li>
-          </ul>
-        </div>
-      </details>
-
-      {% endif %}
-    -->
-
-    </div>
+    
 
   </div>
 

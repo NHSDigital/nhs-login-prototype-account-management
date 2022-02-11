@@ -87,6 +87,7 @@
 
 .nhsuk-table-container.user-info-table {
 	margin-top: 0px;
+  
 }
 
 .cell-left {
@@ -438,7 +439,9 @@ p{
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.25;
-    padding-left: 45px; }
+    padding-left: 45px;
+    text-align: left; 
+  }
   
   .nhsuk-warning-text__assistive {
     -webkit-clip-path: inset(50%) !important;

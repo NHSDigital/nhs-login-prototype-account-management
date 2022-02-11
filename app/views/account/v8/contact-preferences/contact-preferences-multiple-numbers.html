@@ -17,22 +17,23 @@
       <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
       <p>These are the details your GP and other NHS services use to contact you. This will not change your NHS login details.</p>
       <div class="nhsuk-table-responsive.user-info-table">
-        <table class="nhsuk-table">
+        <table class="nhsuk-table-responsive">
           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell cell-left"><b>Email address</b></td>
+              <td class="nhsuk-table__cell"><b>Email address</b></td>
               {% if data['emailAddress'] %}
               <td class="nhsuk-table__cell">{{ data['emailAddress'] }}</td>
                 {% else %}
               <td class="nhsuk-table__cell"><p style="margin: 0px;">jonkingston@gmail.com</p></td>
               {% endif %}
               </td>
-              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt">Change email address</a></td>
+              <td class="nhsuk-table__cell"></td>
+             <!-- <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt">Change email address</a></td>-->
             </tr>
             
             <tr class="nhsuk-table__row">
-              <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
-              <td class="nhsuk-table__cell cell-left">
+              <td class="nhsuk-table__cell"><b>Mobile phone number</b></td>
+              <td class="nhsuk-table__cell">
                 <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
                   <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
                   <strong class="nhsuk-warning-text__text">
@@ -41,7 +42,7 @@
                   </strong>
                 </div>
               </td>
-              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/change-mobile-interrupt?=multiple-numbers">Choose which mobile phone number you want to keep on your NHS record</a></td>
+              <td class="nhsuk-table__cell"><a href="/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/change-mobile-interrupt?=multiple-numbers">Choose which mobile phone number you want to keep on your NHS record</a></td>
             </tr>
           </tbody>
         </table>

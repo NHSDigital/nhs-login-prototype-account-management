@@ -16,19 +16,19 @@ Confirm changes to NHS record
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change mobile phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
               Confirm changes to NHS record
             </h1>
           </legend>
-
-        <div class="nnhsuk-table-container">
-          <table class="nhsuk-table">
+          <p><b>You have chosen to change your mobile phone number to</b></p>
+        <div class="nhsuk-table-responsive.user-info-table">
+          <table class="nhsuk-table-responsive">
             <tbody class="nhsuk-table__body">
               <tr class="nhsuk-table__row">
-                <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td>
-                <td class="nhsuk-table__cell ">{{ data.mobileNumber or '07888364455' }}</td>
-                <td class="nhsuk-table__cell "><a href="#">Change mobile phone number</a></td>
+              <!--  <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td> -->
+                <td class="nhsuk-table__cell ">{{ data['choose-number-radio'] or '07888364455' }}</td>
+               <!-- <td class="nhsuk-table__cell "><a href="#">Change mobile phone number</a></td>-->
               </tr>
             </tbody>
           </table>
@@ -36,7 +36,8 @@ Confirm changes to NHS record
 
         <div class="nhsuk-u-padding-bottom-2"></div>
 
-        <p>These changes will not affect your NHS login details.</p>
+        <p>If this is not correct, you can <a href="multiple-numbers-select">change your mobile phone number</a>.</p>
+        <p>These changes will not affect your NHS login.</p>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
 
@@ -45,12 +46,32 @@ Confirm changes to NHS record
         </button>
 
         <div class="nhsuk-u-padding-bottom-2"></div>
-        <p><a href="/account/v8/contact-preferences/contact-preferences-mulitple-numbers" class="nhsuk-link">I do not want to change my phone number</a></p>
+        <p><a href="/account/v8/contact-preferences/contact-preferences-multiple-numbers" class="nhsuk-link">I do not want to change my phone number</a></p>
             
         </fieldset>
 
       </div>
     </form>
+    {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="/account/v8/contact-preferences/index">User has all details (change details)</a></li>
+            <li><a href="/../../../contact-preferences-multiple-numbers">User has multiple numbers</a></li>
+            <li><a href="/../../../contact-preferences-no-email">User has no email</a></li>
+            <li><a href="/../../../contact-preferences-no-phone">User has no phone</a></li>
+            <li><a href="/../../../contact-preferences-no-email-no-phone">User has no email or phone</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
 
   </div>
 </div>

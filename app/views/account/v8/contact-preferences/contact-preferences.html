@@ -17,18 +17,18 @@
       <h1 class="nhsuk-heading-xl">Contact details on your NHS record</h1>
       <p>These are the details your GP and other NHS services use to contact you. This will not change your NHS login details.</p>
       <div class="nhsuk-table-responsive.user-info-table">
-        <table class="nhsuk-table">
+        <table class="nhsuk-table-responsive">
           <tbody class="nhsuk-table__body">
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Email address</b></td>
               <td class="nhsuk-table__cell"><p style="margin: 0px;">{{ data.emailAddress or 'jonkingston@gmail.com' }}</p></td>
               </td>
-              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt?=change-details">Change email address</a></td>
+            <!--  <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-email/change-email-interrupt?=change-details">Change email address</a></td> -->
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
               <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;455</td>
-              <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-mobile-phone/change-mobile-interrupt">Change phone number</a></td>
+            <!--  <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-mobile-phone/change-mobile-interrupt">Change phone number</a></td> -->
             </tr>
           </tbody>
         </table>
@@ -47,6 +47,8 @@
             <li><a href="contact-preferences">User has all details (change details)</a></li>
             <li><a href="contact-preferences-multiple-numbers">User has multiple numbers</a></li>
             <li><a href="contact-preferences-no-email">User has no email</a></li>
+            <li><a href="contact-preferences-no-phone">User has no phone</a></li>
+            <li><a href="contact-preferences-no-email-no-phone">User has no email or phone</a></li>
           </ul>
         </div>
       </details>

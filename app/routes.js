@@ -220,7 +220,7 @@ router.post('/account/v8/contact-preferences/interrupt-journey/multiple-numbers/
   }
 })
 
-// Interrupt email select
+// Interrupt email select 
 
 router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email-use-login', function (req, res) {
   var useLogin = req.session.data['use-nhs-login'];
@@ -234,7 +234,7 @@ router.post('/account/v8/contact-preferences/interrupt-journey/no-email/no-email
   }
 })
 
-// Multiple numbers route
+// Multiple numbers route (contact preferences)
 
 router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-numbers/multiple-numbers-select', function (req, res) {
   
@@ -252,7 +252,7 @@ router.post('/account/v8/contact-preferences/change-mobile-phone/multiple-number
   }
 })
 
-// No email
+// No email (contact preferences)
 
 router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login', function (req, res) {
   var useLogin = req.session.data['use-nhs-login'];
@@ -269,6 +269,25 @@ router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-
 router.post('/account/v8/contact-preferences/change-email/no-email/no-email-use-login-push', function (req, res){
   res.redirect('/account/v8/index?route=3')
 })
+
+// No phone (contact preferences)
+
+router.post('/account/v8/contact-preferences/change-mobile-phone/no-phone/no-phone-use-login', function (req,res){
+  var useLoginPhone = req.session.data['use-nhs-login-phone'];
+  if (useLoginPhone == "yes"){
+    res.redirect('/account/v8/contact-preferences/change-mobile-phone/no-phone/check-your-details-phone')
+    //console.log ("yes")
+  }
+  else {
+    res.redirect('/account/v8/contact-preferences/change-mobile-phone/no-phone/no-phone-use-login-push')
+    //console.log ("No")
+  }
+})
+
+router.post('/account/v8/contact-preferences/change-mobile-phone/no-phone/no-phone-use-login-push', function (req, res){
+  res.redirect('/account/v8/index')
+})
+
 // Update other details
 
 router.post('/account/v8/contact-preferences-account/change-mobile-phone/phone-changed', function (req, res) {

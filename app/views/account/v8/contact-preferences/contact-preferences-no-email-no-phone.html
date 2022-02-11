@@ -34,9 +34,16 @@
             </tr>
             <tr class="nhsuk-table__row">
               <td class="nhsuk-table__cell cell-left"><b>Mobile phone number</b></td>
-              <td class="nhsuk-table__cell ">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;455</td>
-              <td class="nhsuk-table__cell cell-right"></td>
-            <!--  <td class="nhsuk-table__cell cell-right"><a href="/account/v8/contact-preferences/change-mobile-phone/change-mobile-interrupt">Change phone number</a></td>-->
+              <td class="nhsuk-table__cell cell-left">
+              <div class="nhsuk-warning-text nhsuk-u-margin-bottom-3 nhsuk-u-margin-top-3">
+                <span class="nhsuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="nhsuk-warning-text__text">
+                  <span class="nhsuk-warning-text__assistive">Important</span>
+                Your mobile phone number is not on your NHS record
+                </strong>
+              </div>
+              </td>
+              <td class="nhsuk-table__cell cell-left"><a href="/account/v8/contact-preferences/change-mobile-phone/change-mobile-interrupt-add?=no-phone">Add a mobile phone number to your NHS record</a></td> 
             </tr>
           </tbody>
         </table>
@@ -50,7 +57,7 @@
           </span>
         </summary>
         <div class="nhsuk-details__text">
-          <p>Recovery</p>
+          <p>Update contact preferences</p>
           <ul>
             <li><a href="contact-preferences">User has all details (change details)</a></li>
             <li><a href="contact-preferences-multiple-numbers">User has multiple numbers</a></li>

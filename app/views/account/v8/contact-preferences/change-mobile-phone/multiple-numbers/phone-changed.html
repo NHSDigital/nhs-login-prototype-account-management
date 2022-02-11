@@ -16,13 +16,13 @@ Check your details
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change phone number on NHS record</span>
+          <span class="nhsuk-hint  nhsuk-u-margin-bottom-2">Change mobile phone number on NHS record</span>
             <h1 class="nhsuk-fieldset__heading">
               We have saved your contact details to your NHS record
             </h1>
           </legend>
 
-          <p>The mobile phone number on your NHS record has been changed to <strong>{{ data.mobileNumber or '07888364455' }}</strong>.
+          <p>The mobile phone number on your NHS record has been changed to <strong>{{ data['choose-number-radio'] or '07888364455' }}</strong>.
 
             <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label">
@@ -43,6 +43,27 @@ Check your details
 
       </div>
     </form>
+
+    {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="contact-preferences">User has all details (change details)</a></li>
+            <li><a href="contact-preferences-multiple-numbers">User has multiple numbers</a></li>
+            <li><a href="contact-preferences-no-email">User has no email</a></li>
+            <li><a href="contact-preferences-no-phone">User has no phone</a></li>
+            <li><a href="contact-preferences-no-email-no-phone">User has no email or phone</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
 
   </div>
 </div>
