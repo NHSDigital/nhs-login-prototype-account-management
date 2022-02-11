@@ -21,17 +21,19 @@ Confirm changes to NHS record
               Confirm changes to NHS record
             </h1>
           </legend>
-
-        <div class="nnhsuk-table-container">
-          <table class="nhsuk-table-responsive">
-            <tbody class="nhsuk-table__body">
-              <tr class="nhsuk-table__row">
-                  <td class="nhsuk-table__cell"><b>Your current NHS login email address</b></td>
-                <td class="nhsuk-table__cell ">{{ data.email-address or 'jonkingston@gmail.com' }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <p><b>You have chosen to change your email address to</b></p>
+          <div class="nhsuk-table-responsive.user-info-table">
+            <table class="nhsuk-table-responsive">
+              <tbody class="nhsuk-table__body">
+                <tr class="nhsuk-table__row">
+                <!--  <td class="nhsuk-table__cell"><b>Your chosen mobile phone number</b></td> -->
+                  <td class="nhsuk-table__cell ">{{ data.email-address or 'jonkingston@gmail.com' }}</td>
+                 <!-- <td class="nhsuk-table__cell "><a href="#">Change mobile phone number</a></td>-->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
         <br>
 
         <p>You will change the email address on your NHS record to <strong>jonkingston@gmail.com</strong>.</p>
