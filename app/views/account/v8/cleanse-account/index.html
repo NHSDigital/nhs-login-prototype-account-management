@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "/",
+    text: "Home"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Correspondence for closing and cleansing accounts after 2 years
+      </h1>
+
+      <ul>
+        <li><a href="email-twelve-month">12 month email</a></li>
+        <li><a href="email-twenty-four-month">2 year email</a></li>
+        <li><a href="sms-twenty-four-month">2 year text</a></li>
+      </ul>
+
+    </div>  
+
+  </div>
+{% endblock %}

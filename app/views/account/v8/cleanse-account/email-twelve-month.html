@@ -1,0 +1,21 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+Information about your NHS login
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <p>Subj: Information about your NHS login<br></p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <p>Hello</p>
+      <p>You have not logged in to your NHS login in the last 12 months.</p>
+      <p>If you do not log in within the next 12 months, your account will be closed.</p>
+      <p>You can use NHS login to access a range of health and care websites and apps wherever you see the NHS login button. <br>To view all services using NHS login visit: <a href="https://www.nhs.uk/nhs-services/online-services/nhs-login/websites-and-apps-you-can-access-with-nhs-login/">https://www.nhs.uk/nhs-services/online-services/nhs-login/websites-and-apps-you-can-access-with-nhs-login/</a></p>
+      <p>By logging in to the NHS App or one of these services in the next month, you will keep your account open.</p>
+      <p>This means you can view your health records, connect with your GP, book appointments and order repeat prescriptions amongst other things.</p>
+    </div>
+  </div>
+
+{% endblock %}
