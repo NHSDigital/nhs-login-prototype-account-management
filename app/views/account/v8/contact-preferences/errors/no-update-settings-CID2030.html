@@ -1,0 +1,53 @@
+{% extends 'layouts/layout-manage-account-2.html' %}
+
+{% block pageTitle %}
+  We could not update your details
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-margin-bottom-4">
+
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-heading-l">
+            We could not update your details
+          </h1>
+        </legend>
+
+        <p class="nhsuk-body">There was a technical problem and we could not update your contact details.</p>
+        <p class="nhsuk-body">You can try to update your contact details again after <strong>24 hours</strong> by logging back in.</p>
+
+        <p class="nhsuk-body">Reference: <strong>CID2030</strong></p>
+
+        <a class="nhsuk-button nhsuk-u-margin-bottom-0 full-width" href="/account/v8/index">
+          Back to contact details
+        </a>
+      </fieldset>
+
+
+
+      {% if data['devMode'] %}
+      <details class="nhsuk-details dev-mode" role="group">
+        <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
+          <span class="nhsuk-details__summary-text">
+            Continue with testing scenario
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>Recovery</p>
+          <ul>
+            <li><a href="contact-preferences">User has all details (change details)</a></li>
+            <li><a href="contact-preferences-multiple-numbers">User has multiple numbers</a></li>
+            <li><a href="contact-preferences-no-email">User has no email</a></li>
+            <li><a href="contact-preferences-no-phone">User has no phone</a></li>
+            <li><a href="contact-preferences-no-email-no-phone">User has no email or phone</a></li>
+          </ul>
+        </div>
+      </details>
+
+      {% endif %}
+
+    </div>
+  </div>
+{% endblock %}
