@@ -1,0 +1,32 @@
+{% extends 'layouts/layout-email.html' %}
+
+{% block pageTitle %}
+NHS account: registration confirmed
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <p>NHS account: registration confirmed<br></p>
+      <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+      <h1 class="nhsuk-heading-s">You passed our checks</h1>
+      <p>The information, photo and video you sent passed our checks. You now have an NHS account.</p>
+      <p>You can access your account by logging into the NHS App or the NHS website.</p>
+      <p>Log into your account: <a href="https://www.nhsapp.service.nhs.uk/login">https://www.nhsapp.service.nhs.uk/login</a></p>
+     <h2 class="nhsuk-heading-s">What you can do with your NHS account</h2>
+     <p>You have full access to the information and services in your account.</p>
+     <p>This means you can do things like:</p>
+      <ul>
+        <li>download your NHS COVID Pass for travel abroad</li>
+        <li>order repeat prescriptions</li>
+        <li>manage appointments</li>
+        <li>view your GP health record</li>
+        <li>see your NHS number</li>
+      </ul>
+      <p>Log into messages in your account to get more information about the NHS services you can access:
+        <a href="https://www.nhsapp.service.nhs.uk/patient/messages/app-messaging">https://www.nhsapp.service.nhs.uk/patient/messages/app-messaging</a></p>
+      <p>[Please do not reply to this message – this is an automated message]</p>
+    </div>
+  </div>
+
+{% endblock %}
