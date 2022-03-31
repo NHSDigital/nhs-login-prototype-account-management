@@ -190,7 +190,7 @@ router.post('*/prompt-4-choice', function (req, res) {
 
 
 // Clear all session data
-router.get('/clear', (req, res) => {
+router.get('/clear-data', (req, res) => {
 	req.session.data = {}
 	res.redirect('/index')
 })
