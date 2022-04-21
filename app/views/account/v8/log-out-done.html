@@ -12,9 +12,13 @@
       <h1 class="nhsuk-heading-l">
           You are now logged out
       </h1>
+      {% if data.clientName === 'true' %}
+        <p class="nhsuk-body-m">You have logged out of NHS settings, but you may still be logged into <strong>CLIENT</strong>.</p>
+      {% else %}
+        <p class="nhsuk-body-m">You have logged out of NHS settings, but you may still be logged into other websites or apps.</p>
+      {% endif %}
 
-      <p class="nhsuk-body-m"><a href="#">Log in again</a></p>
-
+      <p class="nhsuk-body-m">If you are on a shared device close all windows before you leave.</p>
       <p class="nhsuk-body-m">Visit <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS.UK for more information about NHS login</a></p>
 
     </div>
