@@ -15,13 +15,20 @@
       <div class="nhsuk-inset-text">
         <span class="nhsuk-u-visually-hidden">Information: </span>
       {% if data.clientName === 'true' %}
-        <p class="nhsuk-body-m">You have logged out of NHS settings, but you may still be logged into <strong>CLIENT</strong>.</p>
+        <p class="nhsuk-body-m">You have logged out of NHS login settings, but you may still be logged into <strong>CLIENT</strong>.</p>
       {% else %}
-        <p class="nhsuk-body-m">You have logged out of NHS settings, but you may still be logged into other websites or apps.</p>
+        <p class="nhsuk-body-m">You have logged out of NHS login settings, but you may still be logged into other websites or apps.</p>
       {% endif %}
 
+      {% if data.version === '1' %}
       <p class="nhsuk-body-m">If you are on a shared device close all windows before you leave.</p>
-      </div>
+      {% elif data.version === '2' %}
+      <p class="nhsuk-body-m">If you are on a shared device close any browser windows or tabs that are open before you leave.</p>
+      {% else %}
+      <p class="nhsuk-body-m"><strong>Before you leave</strong><br>If you are on a shared device,  close any browser windows or tabs that are open to keep your details secure.</p>
+      {% endif %}
+    
+    </div>
       <p class="nhsuk-body-m">Visit <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS.UK for more information about NHS login</a></p>
 
     </div>
