@@ -12,14 +12,14 @@
       <h1 class="nhsuk-heading-l">
           You are now logged out
       </h1>
-      <div class="nhsuk-inset-text">
-        <span class="nhsuk-u-visually-hidden">Information: </span>
+      
       {% if data.clientName === 'true' %}
         <p class="nhsuk-body-m">You have logged out of NHS login settings, but you may still be logged into <strong>CLIENT</strong>.</p>
       {% else %}
         <p class="nhsuk-body-m">You have logged out of NHS login settings, but you may still be logged into other websites or apps.</p>
       {% endif %}
-
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
       {% if data.version === '1' %}
       <p class="nhsuk-body-m">If you are on a shared device close all windows before you leave.</p>
       {% elif data.version === '2' %}
