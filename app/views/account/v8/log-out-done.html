@@ -24,14 +24,11 @@
         <span class="nhsuk-u-visually-hidden">Information: </span>
      
       <p class="nhsuk-body-m"><strong>Before you leave</strong><br>If you are on a shared device,  close any browser windows or tabs that are open to keep your details secure.</p>
-     
-    
-    </div>
+      </div>
+      
       <p class="nhsuk-body-m">Visit <a href="https://www.nhs.uk/using-the-nhs/nhs-services/nhs-login/">NHS.UK for more information about NHS login</a></p>
 
-    </div>
-
-    {% if data['devMode'] %}
+      {% if data['devMode'] %}
       <details class="nhsuk-details dev-mode" role="group">
         <summary class="nhsuk-details__summary" role="button" aria-controls="details-content-0" aria-expanded="true">
           <span class="nhsuk-details__summary-text">
@@ -45,8 +42,9 @@
           </ul>
         </div>
       </details>
-
       {% endif %}
+
+    </div>
 
   </div>
 {% endblock %}
