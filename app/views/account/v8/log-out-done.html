@@ -10,12 +10,14 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1 class="nhsuk-heading-l">
-          You are now logged out of NHS login setting
+          You are logged out
       </h1>
       
       {% if data.clientName === 'true' %}
+        <p class="nhsuk-body-m">You will need to log in again to <a href="https://nhs-login-registration.herokuapp.com/set-up/v-9/enter-email?existing=true">manage your NHS account</a>.</p> 
         <p class="nhsuk-body-m">You may still be logged in to <strong>CLIENT</strong> or other websites or apps that use NHS login.</p>
       {% else %}
+        <p class="nhsuk-body-m">You will need to log in again to <a href="https://nhs-login-registration.herokuapp.com/set-up/v-9/enter-email?existing=true">manage your NHS account</a>.</p>
         <p class="nhsuk-body-m">You may still be logged in to other websites or apps that use NHS login.</p>
       {% endif %}
       <div class="nhsuk-inset-text">
